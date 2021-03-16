@@ -1,0 +1,533 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.4f1 (becced5a802b) revision 12504301'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro N for Workstations; OS build 18363.1440; Version 1909; 64bit' Language: 'en' Physical Memory: 8046 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\Program Files\Unity\2020.2.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Data Pelajaran/IF/Semester 6/New/IF3210 - Pengembangan Aplikasi pada Platform Khusus/GitLab/w05_unity_exercise/TANKS!
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+61068
+Successfully changed project path to: D:/Data Pelajaran/IF/Semester 6/New/IF3210 - Pengembangan Aplikasi pada Platform Khusus/GitLab/w05_unity_exercise/TANKS!
+D:/Data Pelajaran/IF/Semester 6/New/IF3210 - Pengembangan Aplikasi pada Platform Khusus/GitLab/w05_unity_exercise/TANKS!
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 41.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.4f1 (becced5a802b)
+[Subsystems] Discovering subsystems at path D:/Program Files/Unity/2020.2.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Data Pelajaran/IF/Semester 6/New/IF3210 - Pengembangan Aplikasi pada Platform Khusus/GitLab/w05_unity_exercise/TANKS!/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c8c)
+    Vendor:   
+    VRAM:     4021 MB
+    Driver:   27.21.14.5671
+Initialize mono
+Mono path[0] = 'D:/Program Files/Unity/2020.2.4f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Program Files/Unity/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Program Files/Unity/2020.2.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56704
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Program Files/Unity/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.000838 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 32.06 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.905 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004229 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.757 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1704 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.0 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2145.
+Total: 2.099100 ms (FindLiveObjects: 0.177200 ms CreateObjectMapping: 0.068000 ms MarkObjects: 1.787100 ms  DeleteObjects: 0.065800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Realistic Terrain Collection/Terrains/Terrain1/Low Resolution_1.asset
+  artifactKey: Guid(74e8a47a277084d4284e32d8e400dc63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Realistic Terrain Collection/Terrains/Terrain1/Low Resolution_1.asset using Guid(74e8a47a277084d4284e32d8e400dc63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5498f77a77bffe8f8d1d35a534515e1') in 0.154998 seconds
+  Import took 0.158616 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005125 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.084 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1579 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.9 MB.
+System memory in use after: 82.5 MB.
+
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 2138.
+Total: 2.277600 ms (FindLiveObjects: 0.179400 ms CreateObjectMapping: 0.065400 ms MarkObjects: 1.598800 ms  DeleteObjects: 0.432500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005013 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.821 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1579 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.5 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2140.
+Total: 2.529100 ms (FindLiveObjects: 0.210200 ms CreateObjectMapping: 0.060400 ms MarkObjects: 2.233700 ms  DeleteObjects: 0.023700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006251 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.919 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1579 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.5 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2142.
+Total: 1.919400 ms (FindLiveObjects: 0.218200 ms CreateObjectMapping: 0.061500 ms MarkObjects: 1.619900 ms  DeleteObjects: 0.017900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 539.027569 seconds.
+  path: Assets/SpeedTutor_Full_Menu_System/Scenes
+  artifactKey: Guid(c14291f9db2514348914dc1f6a2ffa7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpeedTutor_Full_Menu_System/Scenes using Guid(c14291f9db2514348914dc1f6a2ffa7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e5e0d9b4c71298f4e715adc8c27d7dd') in 0.013648 seconds
+  Import took 0.017160 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.656187 seconds.
+  path: Assets/SpeedTutor_Full_Menu_System/Scenes/MainMenu.unity
+  artifactKey: Guid(e84c9862265a1104a9d724503d4111aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpeedTutor_Full_Menu_System/Scenes/MainMenu.unity using Guid(e84c9862265a1104a9d724503d4111aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '720a0ccb7d8833cf1785c9ed637da038') in 0.015764 seconds
+  Import took 0.019532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.379692 seconds.
+  path: Assets/SpeedTutor_Full_Menu_System/Scenes/Level1_Demo.unity
+  artifactKey: Guid(a29848c6cbdc245439fd7641ab34b8bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpeedTutor_Full_Menu_System/Scenes/Level1_Demo.unity using Guid(a29848c6cbdc245439fd7641ab34b8bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ac968f412c6e6306d6d634c8b2b345b') in 0.012888 seconds
+  Import took 0.016331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.994985 seconds.
+  path: Assets/SpeedTutor_Full_Menu_System/MenuScripts
+  artifactKey: Guid(7dbc86f7293d6f6499a75e00941a7e7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpeedTutor_Full_Menu_System/MenuScripts using Guid(7dbc86f7293d6f6499a75e00941a7e7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '833082b74efce023d4e9810fbe3c610d') in 0.008328 seconds
+  Import took 0.011676 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.453929 seconds.
+  path: Assets/SpeedTutor_Full_Menu_System/Prefabs
+  artifactKey: Guid(bc3f24c53cf802441be5fd9dfc789b44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpeedTutor_Full_Menu_System/Prefabs using Guid(bc3f24c53cf802441be5fd9dfc789b44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b890ca95faaee9691b231da01102dfdf') in 0.008695 seconds
+  Import took 0.013945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.038646 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/Tower 1.prefab
+  artifactKey: Guid(43c244d9b4979dd498f4acf72b6e3efc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/Tower 1.prefab using Guid(43c244d9b4979dd498f4acf72b6e3efc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc45200b5e0039873e096e8e93a635fe') in 0.273939 seconds
+  Import took 0.290517 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.036069 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/Tower 1.prefab
+  artifactKey: Guid(43c244d9b4979dd498f4acf72b6e3efc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/Tower 1.prefab using Guid(43c244d9b4979dd498f4acf72b6e3efc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc45200b5e0039873e096e8e93a635fe') in 0.013695 seconds
+  Import took 0.017209 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.110838 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/C_Monument_1.prefab
+  artifactKey: Guid(26549b7fab7c3c44f83df2c6b0d9f35a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/C_Monument_1.prefab using Guid(26549b7fab7c3c44f83df2c6b0d9f35a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e56ede01c52f06df6f496fde7dc85ad') in 0.308718 seconds
+  Import took 0.312016 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.160828 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/Castle Wall One Sided_1.prefab
+  artifactKey: Guid(55b2ee71af3e62a4e923116c9de2bb60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/Castle Wall One Sided_1.prefab using Guid(55b2ee71af3e62a4e923116c9de2bb60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7607e520152af2a15b7d4ce596338f36') in 0.025427 seconds
+  Import took 0.030403 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007646 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/Castle Wall One Sided_1.prefab
+  artifactKey: Guid(55b2ee71af3e62a4e923116c9de2bb60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/Castle Wall One Sided_1.prefab using Guid(55b2ee71af3e62a4e923116c9de2bb60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7607e520152af2a15b7d4ce596338f36') in 0.020357 seconds
+  Import took 0.024415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.975317 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Blacksmith/Furnace Door Full.prefab
+  artifactKey: Guid(5d83b7c1bf9c1864ebd4c0fd2cd0b5af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Blacksmith/Furnace Door Full.prefab using Guid(5d83b7c1bf9c1864ebd4c0fd2cd0b5af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cd9b75cb8d5c6521bdb0a06647d1d00') in 0.157272 seconds
+  Import took 0.160705 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.798634 seconds.
+  path: Assets/Castle 1 LITE/FBX/Castle Wall.fbx
+  artifactKey: Guid(4fecd5560aba7964a8742937aab6bc28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/FBX/Castle Wall.fbx using Guid(4fecd5560aba7964a8742937aab6bc28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfd188463fb040e9a0f12ece8af083ac') in 0.094337 seconds
+  Import took 0.097549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.315527 seconds.
+  path: Assets/Castle 1 LITE/FBX/Castle Wall One Sided_1.fbx
+  artifactKey: Guid(90bda5a30777ed24abb3ef6a5dd40d3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/FBX/Castle Wall One Sided_1.fbx using Guid(90bda5a30777ed24abb3ef6a5dd40d3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1311b807c8e8f6be23c1b5740d96503') in 0.024361 seconds
+  Import took 0.027552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001346 seconds.
+  path: Assets/Castle 1 LITE/FBX/Castle Wall One Sided_1.fbx
+  artifactKey: Guid(90bda5a30777ed24abb3ef6a5dd40d3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/FBX/Castle Wall One Sided_1.fbx using Guid(90bda5a30777ed24abb3ef6a5dd40d3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1311b807c8e8f6be23c1b5740d96503') in 0.028596 seconds
+  Import took 0.032529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.561674 seconds.
+  path: Assets/Castle 1 LITE/FBX/Basic Sword.fbx
+  artifactKey: Guid(629befc78c3cf374e8bfd55be52cdf43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/FBX/Basic Sword.fbx using Guid(629befc78c3cf374e8bfd55be52cdf43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f231c25afffdff0a5ed9c59afab043e') in 0.048444 seconds
+  Import took 0.247435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.722627 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Blacksmith
+  artifactKey: Guid(e3ea048537bc0154aa7dcee0ee609edb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Blacksmith using Guid(e3ea048537bc0154aa7dcee0ee609edb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d8fe84c98339fa7480d19e621be49d1') in 0.007982 seconds
+  Import took 0.011920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000710 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Blacksmith
+  artifactKey: Guid(e3ea048537bc0154aa7dcee0ee609edb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Blacksmith using Guid(e3ea048537bc0154aa7dcee0ee609edb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d8fe84c98339fa7480d19e621be49d1') in 0.002965 seconds
+  Import took 0.007222 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.004947 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/Tower 2.prefab
+  artifactKey: Guid(0ad573ef122e81c4181af0f137b71a0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/Tower 2.prefab using Guid(0ad573ef122e81c4181af0f137b71a0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb4cba578eb29396f48f2a690bb499fb') in 0.023796 seconds
+  Import took 0.028128 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002019 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/Tower 2.prefab
+  artifactKey: Guid(0ad573ef122e81c4181af0f137b71a0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/Tower 2.prefab using Guid(0ad573ef122e81c4181af0f137b71a0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb4cba578eb29396f48f2a690bb499fb') in 0.023300 seconds
+  Import took 0.026891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.345623 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/Tower 1_New.prefab
+  artifactKey: Guid(cb4ad399655d3c142a3add78b5e01774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/Tower 1_New.prefab using Guid(cb4ad399655d3c142a3add78b5e01774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55a565a24b3e1c259c5c6738220c224f') in 0.290836 seconds
+  Import took 0.293934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.974015 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/Full Castle_New.prefab
+  artifactKey: Guid(b75d5ea986d785c4ea6139debe862089) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/Full Castle_New.prefab using Guid(b75d5ea986d785c4ea6139debe862089) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f48aeb4a362c4afb6a9ffcca674ccc3c') in 0.031231 seconds
+  Import took 0.034763 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001976 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/Full Castle_New.prefab
+  artifactKey: Guid(b75d5ea986d785c4ea6139debe862089) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/Full Castle_New.prefab using Guid(b75d5ea986d785c4ea6139debe862089) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f48aeb4a362c4afb6a9ffcca674ccc3c') in 0.025595 seconds
+  Import took 0.028992 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.445930 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/Full Castle.prefab
+  artifactKey: Guid(0cd809d02bf1f25468dd52883876e44c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/Full Castle.prefab using Guid(0cd809d02bf1f25468dd52883876e44c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d6a8c8c324db339e76c8e4d7fef59dd') in 0.023383 seconds
+  Import took 0.036141 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.397982 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Blacksmith/Furnace_New.prefab
+  artifactKey: Guid(25e33a73003213d459352a83a7be76c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Blacksmith/Furnace_New.prefab using Guid(25e33a73003213d459352a83a7be76c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85c1a003ef9ecf883a766b257fac38dc') in 0.028297 seconds
+  Import took 0.032228 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.489144 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Blacksmith/Furnace.prefab
+  artifactKey: Guid(e99faa4dd71cbf94a950084bb36cb4a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Blacksmith/Furnace.prefab using Guid(e99faa4dd71cbf94a950084bb36cb4a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '386e1625727df01f8f2ee6984e3f2575') in 0.024120 seconds
+  Import took 0.027497 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000993 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Blacksmith/Furnace.prefab
+  artifactKey: Guid(e99faa4dd71cbf94a950084bb36cb4a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Blacksmith/Furnace.prefab using Guid(e99faa4dd71cbf94a950084bb36cb4a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '386e1625727df01f8f2ee6984e3f2575') in 0.018618 seconds
+  Import took 0.022855 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.303580 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Blacksmith/Blacksmith Full.prefab
+  artifactKey: Guid(1a3befe788845b04d8d0fe13a9e05acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Blacksmith/Blacksmith Full.prefab using Guid(1a3befe788845b04d8d0fe13a9e05acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59bf9b977f4498b6a897444dc344dd9d') in 0.025341 seconds
+  Import took 0.029012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.653729 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Blacksmith/Blacksmith Full_New.prefab
+  artifactKey: Guid(9249001ed999d1d4da603fd523a0de72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Blacksmith/Blacksmith Full_New.prefab using Guid(9249001ed999d1d4da603fd523a0de72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e947faf102f9b233cc9a4a6d15652d3d') in 0.024857 seconds
+  Import took 0.028713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.154776 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Blacksmith/Anvil_New.prefab
+  artifactKey: Guid(19a0f38096480994eb0382d1b48778fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Blacksmith/Anvil_New.prefab using Guid(19a0f38096480994eb0382d1b48778fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0604d9185fe62c0e4bf862b5f1fc8b1e') in 0.024284 seconds
+  Import took 0.027743 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001171 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Blacksmith/Anvil_New.prefab
+  artifactKey: Guid(19a0f38096480994eb0382d1b48778fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Blacksmith/Anvil_New.prefab using Guid(19a0f38096480994eb0382d1b48778fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0604d9185fe62c0e4bf862b5f1fc8b1e') in 0.013420 seconds
+  Import took 0.017005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 77.061144 seconds.
+  path: Assets/Scenes/Main.unity
+  artifactKey: Guid(548b5d15c6873cb468b2e98225feabcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main.unity using Guid(548b5d15c6873cb468b2e98225feabcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83fdb06fa247a4c85e0081ac0ae27ec5') in 0.010454 seconds
+  Import took 0.015548 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.020398 seconds.
+  path: Assets/Scenes/Map1.unity
+  artifactKey: Guid(548b5d15c6873cb468b2e98225feabcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map1.unity using Guid(548b5d15c6873cb468b2e98225feabcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '594dc3ec32f6c2a8821987c7c1d6649b') in 0.009260 seconds
+  Import took 0.012881 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.281101 seconds.
+  path: Assets/Scenes/Map1 1.unity
+  artifactKey: Guid(9d0b2bd559275384886b783f3f615903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map1 1.unity using Guid(9d0b2bd559275384886b783f3f615903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '233be7440893f2eec5482b56fde68457') in 0.009463 seconds
+  Import took 0.012756 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.305261 seconds.
+  path: Assets/Scenes/Map2.unity
+  artifactKey: Guid(9d0b2bd559275384886b783f3f615903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map2.unity using Guid(9d0b2bd559275384886b783f3f615903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1cb1e027387161c25914b06a4c8b686') in 0.008079 seconds
+  Import took 0.011578 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 129.275295 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/Floor_3.prefab
+  artifactKey: Guid(981f3be55cf9ac847a442cff94afa69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/Floor_3.prefab using Guid(981f3be55cf9ac847a442cff94afa69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '998748512ece5bde06cf6a7796286083') in 0.027295 seconds
+  Import took 0.030849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.039073 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/Floor_3.prefab
+  artifactKey: Guid(981f3be55cf9ac847a442cff94afa69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/Floor_3.prefab using Guid(981f3be55cf9ac847a442cff94afa69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '998748512ece5bde06cf6a7796286083') in 0.010628 seconds
+  Import took 0.013891 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005079 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.772 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1579 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.9 MB.
+System memory in use after: 87.0 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2156.
+Total: 1.589400 ms (FindLiveObjects: 0.171300 ms CreateObjectMapping: 0.049000 ms MarkObjects: 1.355700 ms  DeleteObjects: 0.012800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004490 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.745 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1579 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.9 MB.
+System memory in use after: 87.0 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2158.
+Total: 1.920900 ms (FindLiveObjects: 0.192100 ms CreateObjectMapping: 0.063600 ms MarkObjects: 1.644800 ms  DeleteObjects: 0.019300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 17283.071657 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/Floor_1.prefab
+  artifactKey: Guid(ec8e70fa51b41e444b30f57adf2d80a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/Floor_1.prefab using Guid(ec8e70fa51b41e444b30f57adf2d80a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '823a971741766b983a8c90d222268699') in 2.347847 seconds
+  Import took 3.201325 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.899914 seconds.
+  path: Assets/Castle 1 LITE/Prefabs/Castle/2-Way Stairway L.prefab
+  artifactKey: Guid(7f9e65acf41e9bc4aa4196e7318e5972) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Castle 1 LITE/Prefabs/Castle/2-Way Stairway L.prefab using Guid(7f9e65acf41e9bc4aa4196e7318e5972) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '933d04abbdcb1658c8c22a15f9093542') in 0.267452 seconds
+  Import took 0.274713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 103.168960 seconds.
+  path: Assets/Scenes/Map2.unity
+  artifactKey: Guid(9d0b2bd559275384886b783f3f615903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map2.unity using Guid(9d0b2bd559275384886b783f3f615903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a177cb46e8f69649a8296485aebe9314') in 0.070469 seconds
+  Import took 0.106965 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.179295 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.837 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1579 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.0 MB.
+System memory in use after: 87.1 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2161.
+Total: 2.440100 ms (FindLiveObjects: 0.271300 ms CreateObjectMapping: 0.072700 ms MarkObjects: 2.072400 ms  DeleteObjects: 0.021900 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

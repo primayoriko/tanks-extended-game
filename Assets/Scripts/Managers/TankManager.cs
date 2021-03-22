@@ -1,85 +1,112 @@
-﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-
-[Serializable]
-public class TankManager
+public class TankManager : NetworkBehaviour
 {
-    // This class is to manage various settings on a tank.
-    // It works with the GameManager class to control how the tanks behave
-    // and whether or not players have control of their tank in the 
-    // different phases of the game.
+    // Both
+    public Color m_PlayerColor;      
 
-    public Color m_PlayerColor;                             // This is the color this tank will be tinted.
-    public Transform m_SpawnPoint;                          // The position and direction the tank will have when it spawns.
-    [HideInInspector]
-    public int m_PlayerNumber;            // This specifies which player this the manager for.
-    [HideInInspector]
-    public string m_ColoredPlayerText;    // A string that represents the player with their number colored to match their tank.
-    [HideInInspector]
-    public GameObject m_Instance;         // A reference to the instance of the tank when it is created.
-    [HideInInspector]
-    public int m_Wins;                    // The number of wins this player has so far.
+    // Client      
+    public Vector3 m_SpawnPosition;
+    public Quaternion m_SpawnRotation;         
+    
+    // Both
+    [HideInInspector] [SyncVar(hook = nameof(Setup))] public int m_PlayerNumber;      
+    
+    // Client       
+    [HideInInspector] public string m_ColoredPlayerText;
+    // [HideInInspector] public GameObject m_Instance;          
 
-
-    private TankMovement m_Movement;                        // Reference to tank's movement script, used to disable and enable control.
-    private TankShooting m_Shooting;                        // Reference to tank's shooting script, used to disable and enable control.
-    private GameObject m_CanvasGameObject;                  // Used to disable the world space UI during the Starting and Ending phases of each round.
+    // Server
+    [HideInInspector] public int m_Wins;   
+    // Both
+    [HideInInspector] [SyncVar(hook = nameof(SetControl))]public bool m_ControlEnabled = false;                  
 
 
-    public void Setup()
+    private TankMovement m_Movement;       
+    private TankShooting m_Shooting;
+    private GameObject m_CanvasGameObject;
+
+    [ClientRpc]
+    public void RpcSetSpawnPoint(Vector3 position, Quaternion rotation)
     {
-        // Get references to the components.
-        m_Movement = m_Instance.GetComponent<TankMovement>();
-        m_Shooting = m_Instance.GetComponent<TankShooting>();
-        m_CanvasGameObject = m_Instance.GetComponentInChildren<Canvas>().gameObject;
+        m_SpawnPosition = position;
+        m_SpawnRotation = rotation;
 
-        // Set the player numbers to be consistent across the scripts.
-        m_Movement.m_PlayerNumber = m_PlayerNumber;
-        m_Shooting.m_PlayerNumber = m_PlayerNumber;
+    }
 
-        // Create a string using the correct color that says 'PLAYER 1' etc based on the tank's color and the player's number.
-        m_ColoredPlayerText = "<color=#" + ColorUtility.ToHtmlStringRGB(m_PlayerColor) + ">PLAYER " + m_PlayerNumber + "</color>";
-
-        // Get all of the renderers of the tank.
-        MeshRenderer[] renderers = m_Instance.GetComponentsInChildren<MeshRenderer>();
-
-        // Go through all the renderers...
-        for (int i = 0; i < renderers.Length; i++)
+    [ClientRpc]
+    public void RpcSetCamera()
+    {
+        if(isLocalPlayer)
         {
-            // ... set their material color to the color specific to this tank.
-            renderers[i].material.color = m_PlayerColor;
+            CameraControl camera = ((GameManager)NetworkManager.singleton).m_CameraControl;
+
+            Transform[] targets = { transform };
+            camera.m_Targets = targets;
         }
     }
 
-
-    // Used during the phases of the game where the player shouldn't be able to control their tank.
-    public void DisableControl()
+    [Client]
+    public void Setup(int oldPlayerNumber, int newPlayerNumber)
     {
+        m_Movement = GetComponent<TankMovement>();
+        m_Shooting = GetComponent<TankShooting>();
+        m_CanvasGameObject = GetComponentInChildren<Canvas>().gameObject;
+
+        // m_Movement.m_PlayerNumber = newPlayerNumber;
+        // m_Shooting.m_PlayerNumber = newPlayerNumber;
+
+        m_ColoredPlayerText = "<color=#" + ColorUtility.ToHtmlStringRGB(m_PlayerColor) + ">PLAYER " + newPlayerNumber + "</color>";
+
+        MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
+
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            renderers[i].material.color = m_PlayerColor;
+        }
+
         m_Movement.enabled = false;
         m_Shooting.enabled = false;
 
         m_CanvasGameObject.SetActive(false);
     }
 
+    [Client]
+    public void SetControl(bool oldControl, bool newControl){
+        m_Movement.enabled = newControl;
+        m_Shooting.enabled = newControl;
 
-    // Used during the phases of the game where the player should be able to control their tank.
-    public void EnableControl()
-    {
-        m_Movement.enabled = true;
-        m_Shooting.enabled = true;
-
-        m_CanvasGameObject.SetActive(true);
+        m_CanvasGameObject.SetActive(newControl);
     }
+    
+    // [ClientRpc]
+    // public void DisableControl()
+    // {
+    //     m_Movement.enabled = false;
+    //     m_Shooting.enabled = false;
 
+    //     m_CanvasGameObject.SetActive(false);
+    // }
 
-    // Used at the start of each round to put the tank into it's default state.
-    public void Reset()
+    // [ClientRpc]
+    // public void EnableControl()
+    // {
+    //     m_Movement.enabled = true;
+    //     m_Shooting.enabled = true;
+
+    //     m_CanvasGameObject.SetActive(true);
+    // }
+
+    [ClientRpc]
+    public void RpcReset()
     {
-        m_Instance.transform.position = m_SpawnPoint.position;
-        m_Instance.transform.rotation = m_SpawnPoint.rotation;
+        transform.position = m_SpawnPosition;
+        transform.rotation = m_SpawnRotation;
 
-        m_Instance.SetActive(false);
-        m_Instance.SetActive(true);
+        gameObject.SetActive(false);
+        gameObject.SetActive(true);
     }
 }

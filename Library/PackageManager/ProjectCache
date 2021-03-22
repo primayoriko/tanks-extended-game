@@ -1,22 +1,20 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: D:/Data Pelajaran/IF/Semester 6/New/IF3210 - Pengembangan Aplikasi
-      pada Platform Khusus/GitLab/w05_unity_exercise/TANKS!/Packages/manifest.json
+    m_FilePath: D:/Tugas/IF3210 Pengembangan Aplikasi pada Platform Khusus/if3210_exercise_13518080/w05_unity_exercise/Tanks!/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637491763049749303
-    m_Hash: 2130245828
+      ticks: 637491483193892252
+    m_Hash: 1451776916
   m_LockFileStatus:
-    m_FilePath: D:/Data Pelajaran/IF/Semester 6/New/IF3210 - Pengembangan Aplikasi
-      pada Platform Khusus/GitLab/w05_unity_exercise/TANKS!/Packages/packages-lock.json
+    m_FilePath: D:/Tugas/IF3210 Pengembangan Aplikasi pada Platform Khusus/if3210_exercise_13518080/w05_unity_exercise/Tanks!/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637512991862276571
-    m_Hash: 2752188729
+      ticks: 637491483648872705
+    m_Hash: 2086231000
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -27,7 +25,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.2d.sprite
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.2d.sprite
       assetPath: Packages/com.unity.2d.sprite
       name: com.unity.2d.sprite
       displayName: 2D Sprite
@@ -78,7 +76,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.2d.tilemap
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.2d.tilemap
       assetPath: Packages/com.unity.2d.tilemap
       name: com.unity.2d.tilemap
       displayName: 2D Tilemap Editor
@@ -123,21 +121,20 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: com.unity.ads@2.0.8
+    - packageId: com.unity.ads@3.6.1
       testable: 0
       isDirectDependency: 1
-      version: 2.0.8
+      version: 3.6.1
       source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\com.unity.ads@2.0.8
+      resolvedPath: D:\Tugas\IF3210 Pengembangan Aplikasi pada Platform Khusus\if3210_exercise_13518080\w05_unity_exercise\Tanks!\Library\PackageCache\com.unity.ads@3.6.1
       assetPath: Packages/com.unity.ads
       name: com.unity.ads
-      displayName: 
+      displayName: Advertisement
       author:
         name: 
         email: 
         url: 
-      category: AssetStore/Unity
+      category: 
       type: 
       description: Unity Ads is a video ad network for iOS and Android that allows
         you to quickly and effectively monetize your games.
@@ -221,8 +218,16 @@ m_PackageAssets:
         - 3.5.2
         - 3.6.1
         verified: 3.6.1
-      dependencies: []
-      resolvedDependencies: []
+      dependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
       keywords:
       - ads
       - unity
@@ -238,21 +243,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 636898887280000000
+      datePublishedTicks: 637433982320000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: ssh://git@github.com/Unity-Technologies/com.unity.ads.git
-        revision: 
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.ads.git
+        revision: aa1c5a9556a9bb62eef662153cfaa1075805106f
         path: 
     - packageId: com.unity.analytics@3.5.3
       testable: 0
       isDirectDependency: 1
       version: 3.5.3
       source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\com.unity.analytics@3.5.3
+      resolvedPath: D:\Tugas\IF3210 Pengembangan Aplikasi pada Platform Khusus\if3210_exercise_13518080\w05_unity_exercise\Tanks!\Library\PackageCache\com.unity.analytics@3.5.3
       assetPath: Packages/com.unity.analytics
       name: com.unity.analytics
       displayName: Analytics Library
@@ -376,8 +380,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.9
       source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\com.unity.collab-proxy@1.3.9
+      resolvedPath: D:\Tugas\IF3210 Pengembangan Aplikasi pada Platform Khusus\if3210_exercise_13518080\w05_unity_exercise\Tanks!\Library\PackageCache\com.unity.collab-proxy@1.3.9
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Unity Collaborate
@@ -472,8 +475,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\com.unity.ide.rider@2.0.7
+      resolvedPath: D:\Tugas\IF3210 Pengembangan Aplikasi pada Platform Khusus\if3210_exercise_13518080\w05_unity_exercise\Tanks!\Library\PackageCache\com.unity.ide.rider@2.0.7
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -574,8 +576,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.5
       source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\com.unity.ide.visualstudio@2.0.5
+      resolvedPath: D:\Tugas\IF3210 Pengembangan Aplikasi pada Platform Khusus\if3210_exercise_13518080\w05_unity_exercise\Tanks!\Library\PackageCache\com.unity.ide.visualstudio@2.0.5
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -646,8 +647,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.3
       source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\com.unity.ide.vscode@1.2.3
+      resolvedPath: D:\Tugas\IF3210 Pengembangan Aplikasi pada Platform Khusus\if3210_exercise_13518080\w05_unity_exercise\Tanks!\Library\PackageCache\com.unity.ide.vscode@1.2.3
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -711,84 +711,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
         revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
         path: 
-    - packageId: com.unity.multiplayer-hlapi@1.0.8
-      testable: 0
-      isDirectDependency: 1
-      version: 1.0.8
-      source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\com.unity.multiplayer-hlapi@1.0.8
-      assetPath: Packages/com.unity.multiplayer-hlapi
-      name: com.unity.multiplayer-hlapi
-      displayName: Multiplayer HLAPI
-      author:
-        name: 
-        email: 
-        url: 
-      category: 
-      type: 
-      description: The high level API component of the Unity Multiplayer system.
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 0.2.4-preview
-        - 0.2.5-preview
-        - 1.0.0
-        - 1.0.1
-        - 1.0.2
-        - 1.0.4
-        - 1.0.6
-        - 1.0.8
-        compatible:
-        - 0.2.4-preview
-        - 0.2.5-preview
-        - 1.0.0
-        - 1.0.1
-        - 1.0.2
-        - 1.0.4
-        - 1.0.6
-        - 1.0.8
-        verified: 
-      dependencies:
-      - name: nuget.mono-cecil
-        version: 0.1.6-preview
-      resolvedDependencies:
-      - name: nuget.mono-cecil
-        version: 0.1.6-preview
-      keywords:
-      - multiplayer
-      - networking
-      - hlapi
-      - high-level
-      - api
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 637436636210000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.multiplayer-hlapi.git
-        revision: 0358096b3626d60d1345cfa6df97fcb2dc89152e
-        path: 
     - packageId: com.unity.postprocessing@2.3.0
       testable: 0
       isDirectDependency: 1
       version: 2.3.0
       source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\com.unity.postprocessing@2.3.0
+      resolvedPath: D:\Tugas\IF3210 Pengembangan Aplikasi pada Platform Khusus\if3210_exercise_13518080\w05_unity_exercise\Tanks!\Library\PackageCache\com.unity.postprocessing@2.3.0
       assetPath: Packages/com.unity.postprocessing
       name: com.unity.postprocessing
       displayName: Post Processing
@@ -862,13 +790,12 @@ m_PackageAssets:
         url: git@github.com:Unity-Technologies/PostProcessing.git
         revision: e6de985c41f04a5fc7c7227dd67e3e73fac834e7
         path: 
-    - packageId: com.unity.purchasing@2.0.6
+    - packageId: com.unity.purchasing@2.2.2
       testable: 0
       isDirectDependency: 1
-      version: 2.0.6
+      version: 2.2.2
       source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\com.unity.purchasing@2.0.6
+      resolvedPath: D:\Tugas\IF3210 Pengembangan Aplikasi pada Platform Khusus\if3210_exercise_13518080\w05_unity_exercise\Tanks!\Library\PackageCache\com.unity.purchasing@2.2.2
       assetPath: Packages/com.unity.purchasing
       name: com.unity.purchasing
       displayName: In App Purchasing
@@ -879,27 +806,35 @@ m_PackageAssets:
       category: 
       type: 
       description: 'Unity IAP supports the iOS, Mac, tvOS, Google Play, Facebook
-        Gameroom, Windows, Amazon, Samsung Galaxy, Tizen, Cloud Moolah MOO, Xiaomi
-        Mi Game Pay App Stores.
+        Gameroom, Windows, Amazon, and Samsung Galaxy app stores. Additionally, it
+        can work in tandem with the Unity Distribution Portal in order to synchronize
+        catalogs and transactions with even more stores.
 
 
-        With Unity IAP, setting up in-app purchases
-        for your game across multiple app stores has never been easier.
+        With Unity IAP,
+        setting up in-app purchases for your game across multiple app stores has
+        never been easier.
 
 
-        Use
-        one common API to access all stores for free. With just a few lines of code,
-        you can fully understand and optimize your in-game economy.
+        Use one common API to access all stores for
+        free. With just a few lines of code, you can fully understand and optimize
+        your in-game economy.
 
 
-        Unity
-        IAP automatically couples with Unity Analytics enabling you to monitor and
-        act on trends in your revenue and purchase data across multiple platforms.
+        Unity IAP automatically couples with Unity
+        Analytics enabling you to monitor and act on trends in your revenue and purchase
+        data across multiple platforms.
 
 
-        Includes
-        client-side receipt validation for Apple, Google Play, and Xiaomi Mi Game
-        Pay.'
+        Includes client-side receipt validation
+        for Apple App Store and Google Play.
+
+
+        After installing this package,
+        please make sure to open the Services Window and enable In-App Purchasing
+        to use its features. In the In-App Purchasing settings, please make sure
+        to import the Asset Store plugin if you have not already done so. This is
+        necessary to include all of the features.'
       status: 4
       errors: []
       versions:
@@ -968,8 +903,16 @@ m_PackageAssets:
         - 3.0.0-pre.5
         - 3.0.0-pre.6
         verified: 2.2.2
-      dependencies: []
-      resolvedDependencies: []
+      dependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
       keywords:
       - purchasing
       - iap
@@ -986,21 +929,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 636898903830000000
+      datePublishedTicks: 637469418440000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://gitlab.cds.internal.unity3d.com/upm-packages/purchasing/com.unity.purchasing
-        revision: 37674e38ef7548642e33bc97797a71b5eadbecac
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.purchasing.git
+        revision: ee61dd3b9b07a5b3c6d54795306661ce1d0718ad
         path: 
     - packageId: com.unity.test-framework@1.1.20
       testable: 0
       isDirectDependency: 1
       version: 1.1.20
       source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\com.unity.test-framework@1.1.20
+      resolvedPath: D:\Tugas\IF3210 Pengembangan Aplikasi pada Platform Khusus\if3210_exercise_13518080\w05_unity_exercise\Tanks!\Library\PackageCache\com.unity.test-framework@1.1.20
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -1083,13 +1025,12 @@ m_PackageAssets:
         url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
         revision: f04391d9987f4a534f886a9638b011d53e5871d8
         path: 
-    - packageId: com.unity.textmeshpro@3.0.3
+    - packageId: com.unity.textmeshpro@3.0.1
       testable: 0
       isDirectDependency: 1
-      version: 3.0.3
+      version: 3.0.1
       source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\com.unity.textmeshpro@3.0.3
+      resolvedPath: D:\Tugas\IF3210 Pengembangan Aplikasi pada Platform Khusus\if3210_exercise_13518080\w05_unity_exercise\Tanks!\Library\PackageCache\com.unity.textmeshpro@3.0.1
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -1223,21 +1164,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637394911680000000
+      datePublishedTicks: 637314376320000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.textmeshpro.git
-        revision: 648406226df6c4f28a0f64eaab42ddc3db70c475
+        revision: 1604b62e543216408311bcd1355a7a9ca1e65765
         path: 
-    - packageId: com.unity.timeline@1.4.6
+    - packageId: com.unity.timeline@1.2.10
       testable: 0
       isDirectDependency: 1
-      version: 1.4.6
+      version: 1.2.10
       source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\com.unity.timeline@1.4.6
+      resolvedPath: D:\Tugas\IF3210 Pengembangan Aplikasi pada Platform Khusus\if3210_exercise_13518080\w05_unity_exercise\Tanks!\Library\PackageCache\com.unity.timeline@1.2.10
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -1359,24 +1299,8 @@ m_PackageAssets:
         - 1.5.2
         - 1.6.0-pre.1
         verified: 1.4.6
-      dependencies:
-      - name: com.unity.modules.director
-        version: 1.0.0
-      - name: com.unity.modules.animation
-        version: 1.0.0
-      - name: com.unity.modules.audio
-        version: 1.0.0
-      - name: com.unity.modules.particlesystem
-        version: 1.0.0
-      resolvedDependencies:
-      - name: com.unity.modules.director
-        version: 1.0.0
-      - name: com.unity.modules.audio
-        version: 1.0.0
-      - name: com.unity.modules.animation
-        version: 1.0.0
-      - name: com.unity.modules.particlesystem
-        version: 1.0.0
+      dependencies: []
+      resolvedDependencies: []
       keywords:
       - unity
       - animation
@@ -1395,20 +1319,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637463150940000000
+      datePublishedTicks: 637142044780000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
-        revision: 2fe55e5d14362cc4fdcc886f56dbfe518298e4a5
+        url: git@github.cds.internal.unity3d.com:unity/com.unity.timeline.git
+        revision: 4f533b5e8264efc3fb819463027d0c40f24b5801
         path: 
     - packageId: com.unity.ugui@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui
       assetPath: Packages/com.unity.ugui
       name: com.unity.ugui
       displayName: Unity UI
@@ -1466,13 +1390,12 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: com.unity.xr.legacyinputhelpers@2.0.2
+    - packageId: com.unity.xr.legacyinputhelpers@2.1.4
       testable: 0
       isDirectDependency: 1
-      version: 2.0.2
+      version: 2.1.4
       source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.0.2
+      resolvedPath: D:\Tugas\IF3210 Pengembangan Aplikasi pada Platform Khusus\if3210_exercise_13518080\w05_unity_exercise\Tanks!\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.4
       assetPath: Packages/com.unity.xr.legacyinputhelpers
       name: com.unity.xr.legacyinputhelpers
       displayName: XR Legacy Input Helpers
@@ -1537,20 +1460,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 636898920010000000
+      datePublishedTicks: 637244797630000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://gitlab.cds.internal.unity3d.com/upm-packages/XR/LegacyInputHelpers.git
-        revision: 2e7c4c4dbcced83a7e72862f069f6547f4808b42
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.xr.legacyinputhelpers.git
+        revision: 658d345b94c9a7d015f00d946ef160193439a203
         path: 
     - packageId: com.unity.modules.ai@1.0.0
       testable: 0
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ai
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ai
       assetPath: Packages/com.unity.modules.ai
       name: com.unity.modules.ai
       displayName: AI
@@ -1598,7 +1521,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.androidjni
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.androidjni
       assetPath: Packages/com.unity.modules.androidjni
       name: com.unity.modules.androidjni
       displayName: Android JNI
@@ -1646,7 +1569,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.animation
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.animation
       assetPath: Packages/com.unity.modules.animation
       name: com.unity.modules.animation
       displayName: Animation
@@ -1694,7 +1617,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.assetbundle
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.assetbundle
       assetPath: Packages/com.unity.modules.assetbundle
       name: com.unity.modules.assetbundle
       displayName: Asset Bundle
@@ -1742,7 +1665,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.audio
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.audio
       assetPath: Packages/com.unity.modules.audio
       name: com.unity.modules.audio
       displayName: Audio
@@ -1790,7 +1713,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.cloth
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.cloth
       assetPath: Packages/com.unity.modules.cloth
       name: com.unity.modules.cloth
       displayName: Cloth
@@ -1842,7 +1765,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.director
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.director
       assetPath: Packages/com.unity.modules.director
       name: com.unity.modules.director
       displayName: Director
@@ -1898,7 +1821,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imageconversion
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imageconversion
       assetPath: Packages/com.unity.modules.imageconversion
       name: com.unity.modules.imageconversion
       displayName: Image Conversion
@@ -1947,7 +1870,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imgui
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imgui
       assetPath: Packages/com.unity.modules.imgui
       name: com.unity.modules.imgui
       displayName: IMGUI
@@ -1995,7 +1918,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.jsonserialize
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.jsonserialize
       assetPath: Packages/com.unity.modules.jsonserialize
       name: com.unity.modules.jsonserialize
       displayName: JSONSerialize
@@ -2043,7 +1966,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.particlesystem
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.particlesystem
       assetPath: Packages/com.unity.modules.particlesystem
       name: com.unity.modules.particlesystem
       displayName: Particle System
@@ -2091,7 +2014,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics
       assetPath: Packages/com.unity.modules.physics
       name: com.unity.modules.physics
       displayName: Physics
@@ -2139,7 +2062,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics2d
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics2d
       assetPath: Packages/com.unity.modules.physics2d
       name: com.unity.modules.physics2d
       displayName: Physics 2D
@@ -2187,7 +2110,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.screencapture
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.screencapture
       assetPath: Packages/com.unity.modules.screencapture
       name: com.unity.modules.screencapture
       displayName: Screen Capture
@@ -2239,7 +2162,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrain
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrain
       assetPath: Packages/com.unity.modules.terrain
       name: com.unity.modules.terrain
       displayName: Terrain
@@ -2287,7 +2210,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrainphysics
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrainphysics
       assetPath: Packages/com.unity.modules.terrainphysics
       name: com.unity.modules.terrainphysics
       displayName: Terrain Physics
@@ -2343,7 +2266,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.tilemap
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.tilemap
       assetPath: Packages/com.unity.modules.tilemap
       name: com.unity.modules.tilemap
       displayName: Tilemap
@@ -2395,7 +2318,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ui
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ui
       assetPath: Packages/com.unity.modules.ui
       name: com.unity.modules.ui
       displayName: UI
@@ -2443,7 +2366,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.uielements
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.uielements
       assetPath: Packages/com.unity.modules.uielements
       name: com.unity.modules.uielements
       displayName: UIElements
@@ -2507,7 +2430,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.umbra
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.umbra
       assetPath: Packages/com.unity.modules.umbra
       name: com.unity.modules.umbra
       displayName: Umbra
@@ -2555,7 +2478,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unityanalytics
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unityanalytics
       assetPath: Packages/com.unity.modules.unityanalytics
       name: com.unity.modules.unityanalytics
       displayName: Unity Analytics
@@ -2611,7 +2534,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequest
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequest
       assetPath: Packages/com.unity.modules.unitywebrequest
       name: com.unity.modules.unitywebrequest
       displayName: Unity Web Request
@@ -2659,7 +2582,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestassetbundle
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestassetbundle
       assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
       name: com.unity.modules.unitywebrequestassetbundle
       displayName: Unity Web Request Asset Bundle
@@ -2715,7 +2638,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestaudio
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestaudio
       assetPath: Packages/com.unity.modules.unitywebrequestaudio
       name: com.unity.modules.unitywebrequestaudio
       displayName: Unity Web Request Audio
@@ -2771,7 +2694,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequesttexture
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequesttexture
       assetPath: Packages/com.unity.modules.unitywebrequesttexture
       name: com.unity.modules.unitywebrequesttexture
       displayName: Unity Web Request Texture
@@ -2827,7 +2750,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestwww
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestwww
       assetPath: Packages/com.unity.modules.unitywebrequestwww
       name: com.unity.modules.unitywebrequestwww
       displayName: Unity Web Request WWW
@@ -2899,7 +2822,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vehicles
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vehicles
       assetPath: Packages/com.unity.modules.vehicles
       name: com.unity.modules.vehicles
       displayName: Vehicles
@@ -2951,7 +2874,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.video
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.video
       assetPath: Packages/com.unity.modules.video
       name: com.unity.modules.video
       displayName: Video
@@ -3011,7 +2934,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vr
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vr
       assetPath: Packages/com.unity.modules.vr
       name: com.unity.modules.vr
       displayName: VR
@@ -3073,7 +2996,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.wind
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.wind
       assetPath: Packages/com.unity.modules.wind
       name: com.unity.modules.wind
       displayName: Wind
@@ -3121,7 +3044,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.xr
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.xr
       assetPath: Packages/com.unity.modules.xr
       name: com.unity.modules.xr
       displayName: XR
@@ -3181,7 +3104,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.subsystems
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.subsystems
       assetPath: Packages/com.unity.modules.subsystems
       name: com.unity.modules.subsystems
       displayName: Subsystems
@@ -3233,7 +3156,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 2
-      resolvedPath: D:\Program Files\Unity\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.uielementsnative
+      resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.uielementsnative
       assetPath: Packages/com.unity.modules.uielementsnative
       name: com.unity.modules.uielementsnative
       displayName: UIElements Native
@@ -3292,8 +3215,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.6
       source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\com.unity.ext.nunit@1.0.6
+      resolvedPath: D:\Tugas\IF3210 Pengembangan Aplikasi pada Platform Khusus\if3210_exercise_13518080\w05_unity_exercise\Tanks!\Library\PackageCache\com.unity.ext.nunit@1.0.6
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -3349,59 +3271,7 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ext.nunit.git
         revision: 29ea4d6504a5f58fb3a6934db839aa80ae6d9d88
         path: 
-    - packageId: nuget.mono-cecil@0.1.6-preview
-      testable: 0
-      isDirectDependency: 0
-      version: 0.1.6-preview
-      source: 1
-      resolvedPath: D:\Data Pelajaran\IF\Semester 6\New\IF3210 - Pengembangan Aplikasi
-        pada Platform Khusus\GitLab\w05_unity_exercise\TANKS!\Library\PackageCache\nuget.mono-cecil@0.1.6-preview
-      assetPath: Packages/nuget.mono-cecil
-      name: nuget.mono-cecil
-      displayName: Mono Cecil
-      author:
-        name: 
-        email: 
-        url: 
-      category: Libraries
-      type: 
-      description: The mono cecil library from https://www.nuget.org/packages/Mono.Cecil/
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 0.1.5-preview
-        - 0.1.6-preview
-        compatible:
-        - 0.1.5-preview
-        - 0.1.6-preview
-        verified: 
-      dependencies: []
-      resolvedDependencies: []
-      keywords:
-      - mono cecil
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 636898921610000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: git@gitlab.cds.internal.unity3d.com/upm-packages/core/nuget.mono-cecil.git
-        revision: d9e57e10c26ba36a62a828729ad08eb73d0386b6
-        path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: D:/Data Pelajaran/IF/Semester 6/New/IF3210 - Pengembangan Aplikasi
-  pada Platform Khusus/GitLab/w05_unity_exercise/TANKS!/Packages
+m_ProjectPath: D:/Tugas/IF3210 Pengembangan Aplikasi pada Platform Khusus/if3210_exercise_13518080/w05_unity_exercise/Tanks!/Packages
 m_EditorVersion: 2020.2.4f1 (becced5a802b)

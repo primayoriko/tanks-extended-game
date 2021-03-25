@@ -13,7 +13,7 @@ public class TankManager : NetworkBehaviour
     public Quaternion m_SpawnRotation;         
     
     // Both
-    [HideInInspector] [SyncVar(hook = nameof(Setup))] public int m_PlayerNumber;      
+    [HideInInspector] [SyncVar(hook = nameof(Setup))] public int m_PlayerNumber;
     
     // Client       
     [HideInInspector] public string m_ColoredPlayerText;
@@ -22,11 +22,12 @@ public class TankManager : NetworkBehaviour
     // Server
     [HideInInspector] public int m_Wins;   
     // Both
-    [HideInInspector] [SyncVar(hook = nameof(SetControl))]public bool m_ControlEnabled = false;                  
-
+    [HideInInspector] [SyncVar(hook = nameof(SetControl))]public bool m_ControlEnabled = false;  
+    [HideInInspector] [SyncVar(hook = nameof(SetCash))] public int m_Cash = 10000;
 
     private TankMovement m_Movement;       
     private TankShooting m_Shooting;
+    private TankSniperShooting m_SniperShooting;
     private GameObject m_CanvasGameObject;
 
     [ClientRpc]
@@ -54,6 +55,7 @@ public class TankManager : NetworkBehaviour
     {
         m_Movement = GetComponent<TankMovement>();
         m_Shooting = GetComponent<TankShooting>();
+        m_SniperShooting = GetComponent<TankSniperShooting>();
         m_CanvasGameObject = GetComponentInChildren<Canvas>().gameObject;
 
         // m_Movement.m_PlayerNumber = newPlayerNumber;
@@ -70,6 +72,7 @@ public class TankManager : NetworkBehaviour
 
         m_Movement.enabled = false;
         m_Shooting.enabled = false;
+        m_SniperShooting.enabled = false;
 
         m_CanvasGameObject.SetActive(false);
     }
@@ -78,8 +81,14 @@ public class TankManager : NetworkBehaviour
     public void SetControl(bool oldControl, bool newControl){
         m_Movement.enabled = newControl;
         m_Shooting.enabled = newControl;
+        m_SniperShooting.enabled = newControl;
 
         m_CanvasGameObject.SetActive(newControl);
+    }
+
+    [Client]
+    public void SetCash(int oldCash, int newCash){
+        m_Cash = newCash;
     }
     
     // [ClientRpc]

@@ -14,27 +14,27 @@ public class TankShooting : NetworkBehaviour
     public float m_MaxLaunchForce = 30f; 
     public float m_MaxChargeTime = 0.75f;
 
-    private string m_FireButton;         
-    private float m_CurrentLaunchForce;  
-    private float m_ChargeSpeed;         
-    private bool m_Fired;                
+    protected string m_FireButton;         
+    protected float m_CurrentLaunchForce;  
+    protected float m_ChargeSpeed;         
+    protected bool m_Fired;                
 
 
-    private void OnEnable()
+    protected void OnEnable()
     {
         m_CurrentLaunchForce = m_MinLaunchForce;
         m_AimSlider.value = m_MinLaunchForce;
     }
 
 
-    private void Start()
+    protected void Start()
     {
         m_FireButton = "Fire";
 
         m_ChargeSpeed = (m_MaxLaunchForce - m_MinLaunchForce) / m_MaxChargeTime;
     }
 
-    private void Update()
+    protected void Update()
     {
         if (!hasAuthority) return;
         // Track the current state of the fire button and make decisions based on the current launch force.
@@ -66,7 +66,7 @@ public class TankShooting : NetworkBehaviour
     }
 
     [Command]
-    private void CmdFire()
+    protected void CmdFire()
     {
         // Instantiate and launch the shell.
         m_Fired = true;

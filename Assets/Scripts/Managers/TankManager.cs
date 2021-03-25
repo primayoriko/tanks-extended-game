@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 using Mirror;
 
 public class TankManager : NetworkBehaviour
@@ -10,13 +10,14 @@ public class TankManager : NetworkBehaviour
 
     // Client      
     public Vector3 m_SpawnPosition;
-    public Quaternion m_SpawnRotation;         
+    public Quaternion m_SpawnRotation;
     
     // Both
     [HideInInspector] [SyncVar(hook = nameof(Setup))] public int m_PlayerNumber;
     
     // Client       
     [HideInInspector] public string m_ColoredPlayerText;
+    [HideInInspector] public GameObject m_CashTextObject;
     // [HideInInspector] public GameObject m_Instance;          
 
     // Server
@@ -90,7 +91,13 @@ public class TankManager : NetworkBehaviour
     public void SetCash(int oldCash, int newCash){
         m_Cash = newCash;
     }
-    
+
+    [Client]
+    public void Update(){
+        m_CashTextObject.GetComponent<Text>().text = String.Format("Cash: {0}$", m_Cash);
+        //m_CashText.GetComponent<Text>().text = String.Format("Cash: {0}$", m_Cash);
+    }
+
     // [ClientRpc]
     // public void DisableControl()
     // {

@@ -10,6 +10,8 @@ public class TankSniperShooting : TankShooting
     {
         m_FireButton = "SniperFire";
 
+        m_AmmoCost = 15;
+
         m_ChargeSpeed = (m_MaxLaunchForce - m_MinLaunchForce) / m_MaxChargeTime;
 
     }

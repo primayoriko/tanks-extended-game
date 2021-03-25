@@ -26,6 +26,8 @@ public class MultiplayerGameManager : NetworkManager
     private List<TankManager> m_Tanks = new List<TankManager>();
     public CameraControl m_CameraControl;
     public Text m_MessageText;
+    public GameObject m_CashTextObject;
+    //public Text m_MessageText;
 
     [Server]
     public override void OnServerAddPlayer(NetworkConnection conn) {
@@ -37,7 +39,10 @@ public class MultiplayerGameManager : NetworkManager
         NetworkServer.AddPlayerForConnection(conn, player);
         player.GetComponent<TankMovement>().enabled = false;
         player.GetComponent<TankShooting>().enabled = false;
-        m_Tanks.Add(player.GetComponent<TankManager>());
+
+        TankManager tm = player.GetComponent<TankManager>();
+        tm.m_CashTextObject = m_CashTextObject;
+        m_Tanks.Add(tm);
 
         SetCameraTargets();
 

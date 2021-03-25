@@ -13,12 +13,12 @@ public class TankShooting : NetworkBehaviour
     public float m_MinLaunchForce = 15f; 
     public float m_MaxLaunchForce = 30f; 
     public float m_MaxChargeTime = 0.75f;
-
+    
+    protected int m_AmmoCost;
     protected string m_FireButton;         
     protected float m_CurrentLaunchForce;  
     protected float m_ChargeSpeed;         
     protected bool m_Fired;                
-
 
     protected void OnEnable()
     {
@@ -31,19 +31,29 @@ public class TankShooting : NetworkBehaviour
     {
         m_FireButton = "Fire";
 
+        m_AmmoCost = 0;
+
         m_ChargeSpeed = (m_MaxLaunchForce - m_MinLaunchForce) / m_MaxChargeTime;
     }
 
     protected void Update()
     {
+        TankManager tm = GetComponent<TankManager>();
+        if(tm == null)
+        {
+            Debug.LogError("WTF where is my manager");
+        }
+
         if (!hasAuthority) return;
         // Track the current state of the fire button and make decisions based on the current launch force.
         m_AimSlider.value = m_MinLaunchForce;
 
-        if(m_CurrentLaunchForce >= m_MaxLaunchForce && !m_Fired)
+        if(m_CurrentLaunchForce >= m_MaxLaunchForce && !m_Fired && tm.m_Cash >= m_AmmoCost)
         {
             // at max charge, not yet fired
             m_CurrentLaunchForce = m_MaxLaunchForce;
+            tm.m_Cash -= m_AmmoCost;
+
             CmdFire();
         } else if(Input.GetButtonDown(m_FireButton))
         {
@@ -58,8 +68,10 @@ public class TankShooting : NetworkBehaviour
             // Holding the fire button, not yet fired
             m_CurrentLaunchForce += m_ChargeSpeed * Time.deltaTime;
             m_AimSlider.value = m_CurrentLaunchForce;
-        } else if(Input.GetButtonUp(m_FireButton) && !m_Fired)
+        } 
+        else if(Input.GetButtonUp(m_FireButton) && !m_Fired && tm.m_Cash >= m_AmmoCost)
         {
+            tm.m_Cash -= m_AmmoCost;
             // we released the button, havint not fired yet
             CmdFire();
         }

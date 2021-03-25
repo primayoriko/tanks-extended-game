@@ -12,6 +12,8 @@ public class TankMultiShooting : TankShooting
     {
         m_FireButton = "MultiFire";
 
+        m_AmmoCost = 20;
+
         m_ChargeSpeed = (m_MaxLaunchForce - m_MinLaunchForce) / m_MaxChargeTime;
 
     }

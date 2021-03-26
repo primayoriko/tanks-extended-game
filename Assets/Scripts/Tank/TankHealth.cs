@@ -13,7 +13,7 @@ public class TankHealth : NetworkBehaviour
     
     private AudioSource m_ExplosionAudio;          
     private ParticleSystem m_ExplosionParticles;   
-    private float m_CurrentHealth;  
+    [SyncVar(hook = "OnHealthChanged")] private float m_CurrentHealth; 
     private bool m_Dead;            
 
 
@@ -25,24 +25,27 @@ public class TankHealth : NetworkBehaviour
         m_ExplosionParticles.gameObject.SetActive(false);
     }
 
-
+    
     private void OnEnable()
     {
-        if(!hasAuthority) return;
         m_CurrentHealth = m_StartingHealth;
         m_Dead = false;
         
-        CmdSetHealthUI();
+        SetHealthUI();
     }
-    
 
-    [ClientRpc]
-      public void RpcTakeDamage(float amount)
+    [Server]
+    public void TakeDamage(float amount)
+    {
+        m_CurrentHealth -= amount;
+    }    
+
+    public void OnHealthChanged(float oldHealth, float newHealth)
     {
         // Adjust the tank's current health, update the UI based on the new health and check whether or not the tank is dead.
-        m_CurrentHealth -= amount;
+        m_CurrentHealth = newHealth;
 
-        RpcSetHealthUI();
+        SetHealthUI();
 
         if(m_CurrentHealth <= 0f && !m_Dead)
         {
@@ -50,13 +53,7 @@ public class TankHealth : NetworkBehaviour
         }
     }
 
-    [Command]
-    private void CmdSetHealthUI(){
-        RpcSetHealthUI();
-    }
-
-    [ClientRpc]
-    public void RpcSetHealthUI()
+    public void SetHealthUI()
     {
         // Adjust the value and colour of the slider.
         m_Slider.value = m_CurrentHealth;

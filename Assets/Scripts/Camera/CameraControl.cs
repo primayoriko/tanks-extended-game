@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using Mirror;
 
 public class CameraControl : NetworkBehaviour
@@ -6,7 +7,7 @@ public class CameraControl : NetworkBehaviour
     public float m_DampTime = 0.2f;                 
     public float m_ScreenEdgeBuffer = 4f;           
     public float m_MinSize = 6.5f;                  
-    [HideInInspector] public Transform[] m_Targets; 
+    [HideInInspector] public List<Transform> m_Targets; 
 
 
     private Camera m_Camera;                        
@@ -41,7 +42,7 @@ public class CameraControl : NetworkBehaviour
         Vector3 averagePos = new Vector3();
         int numTargets = 0;
 
-        for (int i = 0; i < m_Targets.Length; i++)
+        for (int i = 0; i < m_Targets.Count; i++)
         {
             if (!m_Targets[i].gameObject.activeSelf)
                 continue;
@@ -72,7 +73,7 @@ public class CameraControl : NetworkBehaviour
 
         float size = 0f;
 
-        for (int i = 0; i < m_Targets.Length; i++)
+        for (int i = 0; i < m_Targets.Count; i++)
         {
             if (!m_Targets[i].gameObject.activeSelf)
                 continue;
@@ -104,7 +105,7 @@ public class CameraControl : NetworkBehaviour
     }
 
     [ClientRpc]
-    public void RpcSetCameraTargets(Transform[] targets)
+    public void RpcSetCameraTargets(List<Transform> targets)
     {
         m_Targets = targets;
     }

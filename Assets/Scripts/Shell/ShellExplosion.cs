@@ -17,7 +17,7 @@ public class ShellExplosion : NetworkBehaviour
         Destroy(gameObject, m_MaxLifeTime);
     }
 
-
+    [Server]
     private void OnTriggerEnter(Collider other)
     {
         // Find all the tanks in an area around the shell and damage them.
@@ -37,7 +37,8 @@ public class ShellExplosion : NetworkBehaviour
 
             float damage = CalculateDamage(targetRigidbody.position);
 
-            targetHealth.RpcTakeDamage(damage);
+            targetHealth.TakeDamage(damage);
+            RpcOnTriggerEnter(targetHealth, transform.position);
         }
 
         m_ExplosionParticles.transform.parent = null;
@@ -49,6 +50,11 @@ public class ShellExplosion : NetworkBehaviour
         Destroy(m_ExplosionParticles.gameObject, m_ExplosionParticles.main.duration);
         Destroy(gameObject);
 
+    }
+
+    [ClientRpc]
+    private void RpcOnTriggerEnter(TankHealth tankHealth, Vector3 position){
+        tankHealth.GetComponent<Rigidbody>().AddExplosionForce(m_ExplosionForce, position, m_ExplosionRadius);
     }
 
     [Server]

@@ -19,6 +19,7 @@ public class Crate: NetworkBehaviour
     //     }
     // }
 
+    [Server]
     void OnTriggerEnter(Collider other){
         value = UnityEngine.Random.Range(20, 50);
 

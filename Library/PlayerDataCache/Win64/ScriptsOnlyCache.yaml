@@ -2,14 +2,17 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraControl
-    - GameManager
+    - Crate
     - MultiplayerGameManager
     - ShellExplosion
     - TankHealth
     - TankManager
     - TankMovement
+    - TankMultiShooting
     - TankShooting
+    - TankSniperShooting
     - UIDirectionControl
+    - UIManager
     Mirror.Components.dll:
     - Mirror.NetworkTransform
     Mirror.dll:
@@ -99,37 +102,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1606}
     - Class: 114
-      Script: {instanceID: 1786}
+      Script: {instanceID: 1722}
     - Class: 114
-      Script: {instanceID: 1810}
+      Script: {instanceID: 1788}
     - Class: 114
-      Script: {instanceID: 2532}
+      Script: {instanceID: 1812}
     - Class: 114
-      Script: {instanceID: 2602}
+      Script: {instanceID: 1876}
     - Class: 114
-      Script: {instanceID: 2678}
+      Script: {instanceID: 2536}
     - Class: 114
-      Script: {instanceID: 2736}
+      Script: {instanceID: 2606}
     - Class: 114
-      Script: {instanceID: 2822}
+      Script: {instanceID: 2682}
     - Class: 114
-      Script: {instanceID: 3148}
+      Script: {instanceID: 2740}
     - Class: 114
-      Script: {instanceID: 3432}
+      Script: {instanceID: 2826}
     - Class: 114
-      Script: {instanceID: 3472}
+      Script: {instanceID: 3152}
     - Class: 114
-      Script: {instanceID: 3842}
+      Script: {instanceID: 3436}
     - Class: 114
-      Script: {instanceID: 4568}
+      Script: {instanceID: 3494}
     - Class: 114
-      Script: {instanceID: 4684}
+      Script: {instanceID: 3506}
     - Class: 114
-      Script: {instanceID: 4734}
+      Script: {instanceID: 3850}
     - Class: 114
-      Script: {instanceID: 4874}
+      Script: {instanceID: 4136}
     - Class: 114
-      Script: {instanceID: 5164}
+      Script: {instanceID: 4578}
+    - Class: 114
+      Script: {instanceID: 4694}
+    - Class: 114
+      Script: {instanceID: 4744}
+    - Class: 114
+      Script: {instanceID: 4886}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -275,6 +284,12 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
+      Hash: a8375d383030fe357f84baaef6df173c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIManager
+  - hash:
+      serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -333,6 +348,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 5b4966188a7122fc5568b2152e98e69f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MultiplayerGameManager
   - hash:
       serializedVersion: 2
       Hash: 344a8c2e106a0a4e098e91a52e0af063
@@ -791,16 +812,28 @@ ScriptsOnlyBuild:
     className: AnalyticsEventTrackerEditor
   - hash:
       serializedVersion: 2
-      Hash: 4dc138d08d3afbeb40019e06c8c6e129
+      Hash: 79150d37d3ee28f9c163e32527c14c24
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: 305cd5dbc2758313fc2677493339ede7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TankMultiShooting
   - hash:
       serializedVersion: 2
       Hash: 36f24d1b0e21abb6bbb4226156aead3d
     assemblyName: Mirror.Examples.Cloud.GUI.dll
     namespaceName: Mirror.Cloud.Example
     className: NetworkManagerListServer
+  - hash:
+      serializedVersion: 2
+      Hash: 118b35ae8550a3d65bba4e8c07d59fd2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TankSniperShooting
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -923,7 +956,7 @@ ScriptsOnlyBuild:
     className: NetworkTransform
   - hash:
       serializedVersion: 2
-      Hash: 290ba6e0b30092f504f105fed8dc900b
+      Hash: 58f2003a251b44a1929263e075578b61
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TankManager
@@ -981,6 +1014,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Tanks
     className: Tank
+  - hash:
+      serializedVersion: 2
+      Hash: 77a298ad1524af68d0962fedf8f30992
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Crate
   - hash:
       serializedVersion: 2
       Hash: 5fdc3c691001157e6a51b430df6e5f8c
@@ -1053,6 +1092,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: PostProcessProfile
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObjectPoolingManager
   - hash:
       serializedVersion: 2
       Hash: 50c443b12ccc0b475183318b5088bcc5
@@ -1229,6 +1274,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: f536a21dbf970e4f53791595d9992d57
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CrateManager
+  - hash:
+      serializedVersion: 2
       Hash: 862148ee6f656c9befce49dba370ec3e
     assemblyName: Mirror.Examples.Cloud.GUI.dll
     namespaceName: Mirror.Cloud.Example
@@ -1355,12 +1406,6 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 1c806dd56806ae4ed56b33a36f12a654
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MultiplayerGameManager
-  - hash:
-      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1401,12 +1446,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: AmbientOcclusion
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NewBehaviourScript
   - hash:
       serializedVersion: 2
       Hash: c7c511da52778f6e75f510205c7d3dd8

@@ -26,20 +26,13 @@ public class MultiplayerGameManager : NetworkManager
     public int m_maxCrateSpawned = 100;
     public GameMode m_GameMode = GameMode.LastStand;
     public int m_PointsToWin = 10050;
-
-    // Client           
-    public CameraControl m_CameraControl;
-    public Text m_MessageText;
-    public GameObject m_CashTextObject;
+    // public GameObject m_CashTextObject;
 
     // Server              
-    public GameObject m_TankPrefab;
     public GameObject m_CratePrefab;
-    public Transform m_SpawnPoint;
     public Transform[] m_CrateSpawnPoints;
     public bool[] m_UsedCrateSpawnPoints;
     [HideInInspector] public int m_NumSpawnedCrates = 0;
-    private List<TankManager> m_Tanks = new List<TankManager>();
 
     // Server
     private int m_RoundNumber;
@@ -47,42 +40,119 @@ public class MultiplayerGameManager : NetworkManager
     private WaitForSeconds m_EndWait;
     private TankManager m_RoundWinner;
     private TankManager m_GameWinner;
-    private float start;
+    private List<TankManager> m_Tanks = new List<TankManager>();
+    public CameraControl m_CameraControl;
+    public Text m_MessageText;
+    public List<Transform> m_SpawnPoints;
+    private List<bool> m_Player;
+    private List<bool> m_PlayerAlive;
+    private List<float> m_PlayerHealth;
+    private List<int> m_PlayerCash;
+    public UIManager m_UIManager;
+    public int m_StartingCash;
 
-    //public MultiplayerGameManager()
-    //{
-    //    m_UsedCrateSpawnPoints = new bool[6];
-    //}
+    private List<Color> m_PlayerColor;
+    //public Text m_MessageText;
+
+    [Server]
+    public override void OnStartServer(){
+        base.OnStartServer();
+        Setup();     
+    }
+
+    [Server]
+    public void Setup(){
+        m_StartWait = new WaitForSeconds(m_StartDelay);
+        m_EndWait = new WaitForSeconds(m_EndDelay);
+        m_Player = new List<bool>();
+        m_PlayerAlive = new List<bool>();
+        m_PlayerCash = new List<int>();
+        m_PlayerColor = new List<Color>();
+        m_PlayerHealth = new List<float>();
+        int numOfPlayer = (m_MaxPlayer < m_SpawnPoints.Count) ? m_MaxPlayer : m_SpawnPoints.Count;
+        for(int i = 0; i < numOfPlayer; i++){
+            m_Player.Add(false);
+            m_PlayerAlive.Add(false);
+            m_PlayerHealth.Add(0f);
+            m_PlayerCash.Add(0);
+        }
+        m_PlayerColor.Add(Color.red);
+        m_PlayerColor.Add(Color.green);
+        m_PlayerColor.Add(Color.blue);
+    }
 
     [Server]
     public override void OnServerAddPlayer(NetworkConnection conn) {
-        Transform startPos = GetStartPosition();
-        GameObject player = startPos != null
-            ? Instantiate(playerPrefab, startPos.position, startPos.rotation)
-            : Instantiate(playerPrefab);
-
-        NetworkServer.AddPlayerForConnection(conn, player);
-        player.GetComponent<TankMovement>().enabled = false;
-        player.GetComponent<TankShooting>().enabled = false;
-
-        TankManager tm = player.GetComponent<TankManager>();
-        tm.m_CashTextObject = m_CashTextObject;
-        m_Tanks.Add(tm);
-
+        SpawnTank(conn);
         SetCameraTargets();
 
-        if(m_Tanks.Count == m_MaxPlayer){
+        // Check if game should start
+        bool startGame = true;
+        for(int i = 0; i < m_Player.Count; i++){
+            if(!m_Player[i]){
+                startGame = false;
+                break;
+            }
+        }
+        
+        if(startGame){
             StartCoroutine(GameLoop());
         }
     }
 
+    [Server]
+    private int GetPlayerNumber(){
+        int player = -1;
+        for(int i = 0; i < m_SpawnPoints.Count; i++){
+            if(!m_Player[i]){
+                player = i;
+                break;
+            }
+        }
+        if(player == -1) Debug.Log("PLAYER -1");
+        return player;
+    }
+
+    [Server]
+    private void SpawnTank(NetworkConnection conn)
+    {
+        // Init Player Attribute
+        int playerNumber = GetPlayerNumber();
+        Transform spawnPoint = m_SpawnPoints[playerNumber];
+        Color playerColor = m_PlayerColor[playerNumber];
+
+        // Make Player
+        TankManager tank = Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation).GetComponent<TankManager>();
+        
+        // Set Player Color
+        // MeshRenderer[] renderers = tank.GetComponentsInChildren<MeshRenderer>();
+        // for (int i = 0; i < renderers.Length; i++) renderers[i].material.color = playerColor;
+
+        // Add Player
+        NetworkServer.AddPlayerForConnection(conn, tank.gameObject);
+
+        // Set Player Attribute
+        tank.m_PlayerNumber = playerNumber + 1;
+        tank.RpcSetSpawnPoint(spawnPoint.position, spawnPoint.rotation);
+        tank.m_UIManager = m_UIManager;
+        tank.m_PlayerColor = playerColor;
+        tank.RpcSetup();
+
+        // Finalize Player
+        m_Tanks.Add(tank);
+        m_Player[playerNumber] = true;
+        m_PlayerAlive[playerNumber] = true;
+        m_PlayerHealth[playerNumber] = 100f;
+        m_PlayerCash[playerNumber] = m_StartingCash;
+    }
+
     private void SetCameraTargets()
     {
-        Transform[] targets = new Transform[m_Tanks.Count];
+        List<Transform> targets = new List<Transform>();
 
-        for (int i = 0; i < targets.Length; i++)
+        for (int i = 0; i < m_Player.Count; i++)
         {
-            targets[i] = m_Tanks[i].transform;
+            if(m_Player[i] && m_PlayerAlive[i]) targets.Add(m_Tanks[i].transform);
         }
 
         m_CameraControl.RpcSetCameraTargets(targets);
@@ -114,7 +184,7 @@ public class MultiplayerGameManager : NetworkManager
         m_CameraControl.SetStartPositionAndSize();
 
         m_RoundNumber++;
-        m_MessageText.text = "ROUND " + m_RoundNumber;
+        m_UIManager.RpcSetMessage("ROUND " + m_RoundNumber);
 
         yield return m_StartWait;
     }
@@ -123,12 +193,10 @@ public class MultiplayerGameManager : NetworkManager
     {
         EnableTankControl();
 
-        m_MessageText.text = string.Empty;
-
-        yield return null;
+        m_UIManager.RpcSetMessage("");
 
         // DateTime start = DateTime.Now;
-        start = Time.time;
+        float start = Time.time;
 
         while(!IsTerminalState())
         {
@@ -159,10 +227,10 @@ public class MultiplayerGameManager : NetworkManager
 
         if(m_RoundWinner != null) m_RoundWinner.m_Wins++;
 
-        // m_GameWinner = GetGameWinner();
+        m_GameWinner = GetGameWinner();
 
-        // string message = EndMessage();
-        // m_MessageText.text = message;
+        string message = EndMessage();
+        m_UIManager.RpcSetMessage(message);
 
         yield return m_EndWait;
     }
@@ -179,7 +247,27 @@ public class MultiplayerGameManager : NetworkManager
         }
     }
 
-    private bool OneTankLeft()
+    private string EndMessage()
+    {
+        string message = "DRAW!";
+
+        if (m_RoundWinner != null)
+            message = m_RoundWinner.m_ColoredPlayerText + " WINS THE ROUND!";
+
+        message += "\n\n\n\n";
+
+        for (int i = 0; i < m_Tanks.Count; i++)
+        {
+            message += m_Tanks[i].m_ColoredPlayerText + ": " + m_Tanks[i].m_Wins + " WINS\n";
+        }
+
+        if (m_GameWinner != null)
+            message = m_GameWinner.m_ColoredPlayerText + " WINS THE GAME!";
+
+        return message;
+    }
+
+     private bool OneTankLeft()
     {
         int numTanksLeft = 0;
 
@@ -189,7 +277,7 @@ public class MultiplayerGameManager : NetworkManager
                 numTanksLeft++;
         }
 
-        return numTanksLeft <= 0;
+        return numTanksLeft == 1;
     }
 
     private bool ReachMinPoints()
@@ -224,6 +312,17 @@ public class MultiplayerGameManager : NetworkManager
         return null;
     }
 
+    private TankManager GetGameWinner()
+    {
+        for (int i = 0; i < m_Tanks.Count; i++)
+        {
+            if (m_Tanks[i].m_Wins == m_NumRoundsToWin)
+                return m_Tanks[i];
+        }
+
+        return null;
+    }
+
     private void ResetAllTanks()
     {
         for (int i = 0; i < m_Tanks.Count; i++)
@@ -235,16 +334,13 @@ public class MultiplayerGameManager : NetworkManager
     private void EnableTankControl()
     {
         foreach(TankManager tank in m_Tanks){
-            tank.GetComponent<TankMovement>().enabled = true;
-            tank.GetComponent<TankShooting>().enabled = true;
-        }
+            tank.m_ControlEnabled = true;        }
     }
 
     private void DisableTankControl()
     {
         foreach(TankManager tank in m_Tanks){
-            tank.GetComponent<TankMovement>().enabled = false;
-            tank.GetComponent<TankShooting>().enabled = false;
+            tank.m_ControlEnabled = false;
         }
     }
     
@@ -510,11 +606,6 @@ public class MultiplayerGameManager : NetworkManager
     /// <summary>
     /// This is invoked when a server is started - including when a host is started.
     /// <para>StartServer has multiple signatures, but they all cause this hook to be called.</para>
-    /// </summary>
-    public override void OnStartServer() { }
-
-    /// <summary>
-    /// This is invoked when the client is started.
     /// </summary>
     public override void OnStartClient() { }
 

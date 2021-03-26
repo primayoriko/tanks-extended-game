@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic; 
 using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
@@ -13,19 +14,21 @@ public class TankManager : NetworkBehaviour
     public Quaternion m_SpawnRotation;
     
     // Both
-    [HideInInspector] [SyncVar(hook = nameof(Setup))] public int m_PlayerNumber;
+    [HideInInspector] /*[SyncVar(hook = nameof(Setup))]*/ public int m_PlayerNumber;
     
     // Client       
     [HideInInspector] public string m_ColoredPlayerText;
-    [HideInInspector] public GameObject m_CashTextObject;
+    [HideInInspector] public string m_CashText;
+    // [HideInInspector] public GameObject m_CashTextObject;
+    public UIManager m_UIManager;
     // [HideInInspector] public GameObject m_Instance;          
 
     // Server
     public int m_StartingCash = 10000;
     [HideInInspector] public int m_Wins;   
     // Both
-    [HideInInspector] [SyncVar(hook = nameof(SetControl))]public bool m_ControlEnabled = false;  
-    [HideInInspector] [SyncVar(hook = nameof(SetCash))] public int m_Cash = 0;
+    [HideInInspector] [SyncVar(hook = nameof(SetControlHook))] public bool m_ControlEnabled = false;  
+    [HideInInspector] [SyncVar(hook = nameof(SetCashHook))] public int m_Cash = 0;
 
     private TankMovement m_Movement;       
     private TankShooting m_Shooting;
@@ -39,7 +42,7 @@ public class TankManager : NetworkBehaviour
         m_SpawnRotation = rotation;
 
     }
-
+    
     [ClientRpc]
     public void RpcSetCamera()
     {
@@ -47,75 +50,50 @@ public class TankManager : NetworkBehaviour
         {
             CameraControl camera = ((GameManager)NetworkManager.singleton).m_CameraControl;
 
-            Transform[] targets = { transform };
-            camera.m_Targets = targets;
+            // List<Transform> targets = { transform };
+            // camera.m_Targets = targets;
         }
     }
 
-    [Client]
-    public void Setup(int oldPlayerNumber, int newPlayerNumber)
+    [ClientRpc]
+    public void RpcSetup()
     {
         m_Movement = GetComponent<TankMovement>();
         m_Shooting = GetComponent<TankShooting>();
         m_SniperShooting = GetComponent<TankSniperShooting>();
         m_CanvasGameObject = GetComponentInChildren<Canvas>().gameObject;
 
-        // m_Movement.m_PlayerNumber = newPlayerNumber;
-        // m_Shooting.m_PlayerNumber = newPlayerNumber;
-
-        m_ColoredPlayerText = "<color=#" + ColorUtility.ToHtmlStringRGB(m_PlayerColor) + ">PLAYER " + newPlayerNumber + "</color>";
-
-        MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
-
-        for (int i = 0; i < renderers.Length; i++)
-        {
-            renderers[i].material.color = m_PlayerColor;
-        }
-
-        m_Movement.enabled = false;
-        m_Shooting.enabled = false;
-        m_SniperShooting.enabled = false;
-
-        m_CanvasGameObject.SetActive(false);
+        m_ColoredPlayerText = "<color=#" + ColorUtility.ToHtmlStringRGB(m_PlayerColor) + ">PLAYER " + m_PlayerNumber + "</color>";
+        
+        SetControl(false);
     }
 
-    [Client]
-    public void SetControl(bool oldControl, bool newControl){
-        m_Movement.enabled = newControl;
-        m_Shooting.enabled = newControl;
-        m_SniperShooting.enabled = newControl;
-
-        m_CanvasGameObject.SetActive(newControl);
+    public void SetControlHook(bool oldControl, bool newControl){
+        SetControl(newControl);
     }
 
-    [Client]
-    public void SetCash(int oldCash, int newCash){
-        m_Cash = newCash;
+    public void SetControl(bool value){
+        m_Movement.enabled = value;
+        m_Shooting.enabled = value;
+        m_SniperShooting.enabled = value;
+
+        m_CanvasGameObject.SetActive(value);
+    }
+
+    public void SetCashHook(int oldCash, int newCash){
+        SetCash(newCash);
+    }
+
+    public void SetCash(int amount){
+        m_CashText = "Cash: " + amount;
+        m_UIManager.SetCashText(m_CashText);
     }
 
     [Client]
     public void Update(){
-        m_CashTextObject.GetComponent<Text>().text = String.Format("Cash: {0}$", m_Cash);
-        //m_CashText.GetComponent<Text>().text = String.Format("Cash: {0}$", m_Cash);
+        // m_CashTextObject.GetComponent<Text>().text = m_CashText;
+    //     //m_CashText.GetComponent<Text>().text = String.Format("Cash: {0}$", m_Cash);
     }
-
-    // [ClientRpc]
-    // public void DisableControl()
-    // {
-    //     m_Movement.enabled = false;
-    //     m_Shooting.enabled = false;
-
-    //     m_CanvasGameObject.SetActive(false);
-    // }
-
-    // [ClientRpc]
-    // public void EnableControl()
-    // {
-    //     m_Movement.enabled = true;
-    //     m_Shooting.enabled = true;
-
-    //     m_CanvasGameObject.SetActive(true);
-    // }
 
     [ClientRpc]
     public void RpcReset()
@@ -123,7 +101,7 @@ public class TankManager : NetworkBehaviour
         transform.position = m_SpawnPosition;
         transform.rotation = m_SpawnRotation;
 
-        m_Cash = m_StartingCash;
+        // m_Cash = m_StartingCash;
 
         gameObject.SetActive(false);
         gameObject.SetActive(true);

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VolumeAdapter2 : MonoBehaviour
+public class VolumeAdapterLoad : MonoBehaviour
 {
     private static readonly string BackgroundPref = "BackgroundPref";
     private float backgroundFloat;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class VolumeAdapter : MonoBehaviour
+public class VolumeAdapterSetup : MonoBehaviour
 {
     private static readonly string FirstPlay = "FirstPlay";
     private static readonly string BackgroundPref = "BackgroundPref";

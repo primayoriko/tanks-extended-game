@@ -21,10 +21,11 @@ public class TankManager : NetworkBehaviour
     // [HideInInspector] public GameObject m_Instance;          
 
     // Server
+    public int m_StartingCash = 10000;
     [HideInInspector] public int m_Wins;   
     // Both
     [HideInInspector] [SyncVar(hook = nameof(SetControl))]public bool m_ControlEnabled = false;  
-    [HideInInspector] [SyncVar(hook = nameof(SetCash))] public int m_Cash = 10000;
+    [HideInInspector] [SyncVar(hook = nameof(SetCash))] public int m_Cash = 0;
 
     private TankMovement m_Movement;       
     private TankShooting m_Shooting;
@@ -121,6 +122,8 @@ public class TankManager : NetworkBehaviour
     {
         transform.position = m_SpawnPosition;
         transform.rotation = m_SpawnRotation;
+
+        m_Cash = m_StartingCash;
 
         gameObject.SetActive(false);
         gameObject.SetActive(true);

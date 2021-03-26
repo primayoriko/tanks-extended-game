@@ -493,9 +493,10 @@ MonoBehaviour:
   m_PlayerColor: {r: 0.09416164, g: 0.8679245, b: 0.306684, a: 0}
   m_SpawnPosition: {x: 0, y: 0, z: 0}
   m_SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
-  m_CashText: {fileID: 0}
   m_PlayerNumber: 0
   m_ColoredPlayerText: 
+  m_CashTextObject: {fileID: 0}
+  m_StartingCash: 500
   m_Wins: 0
   m_ControlEnabled: 0
   m_Cash: 10000

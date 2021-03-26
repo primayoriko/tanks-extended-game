@@ -977,11 +977,12 @@ MonoBehaviour:
   m_NumRoundsToWin: 5
   m_StartDelay: 5
   m_EndDelay: 5
-  m_CrateSpawnDelay: 6
+  m_CrateSpawnDelay: 10
   m_MinPlayer: 1
   m_MaxPlayer: 1
-  m_GameMode: 0
-  m_maxCrateSpawned: 3
+  m_maxCrateSpawned: 10
+  m_GameMode: 1
+  m_PointsToWin: 550
   m_CameraControl: {fileID: 2131488775}
   m_MessageText: {fileID: 67260819}
   m_CashTextObject: {fileID: 1862591838}
@@ -998,6 +999,7 @@ MonoBehaviour:
   - {fileID: 1877593450}
   - {fileID: 1545406406}
   m_UsedCrateSpawnPoints: 000000000000
+  m_NumSpawnedCrates: 0
 --- !u!4 &1304999445
 Transform:
   m_ObjectHideFlags: 0

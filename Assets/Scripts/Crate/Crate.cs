@@ -2,9 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 // [Serializable]
-public class Crate: MonoBehaviour
+public class Crate: NetworkBehaviour
 {
     // public Transform m_SpawnPoint;
     // [HideInInspector] public GameObject m_Instance;      
@@ -23,19 +24,18 @@ public class Crate: MonoBehaviour
 
         TankManager tm = other.GetComponent<TankManager>();
 
-        MultiplayerGameManager gm = other.GetComponentInParent<MultiplayerGameManager>();
+        // MultiplayerGameManager gm = other.GetComponentInParent<MultiplayerGameManager>();
 
         if(tm != null)
         {
             tm.m_Cash += value;
-            
-            if(gm != null)
-            {
-                gm.m_NumSpawnedCrates--;
-            } else
-            {
-                Debug.Log("GMGMMGMGMGM");
-            }
+
+            //if(gm == null)
+            //{
+            //    Debug.Log("sadasds");
+            //}
+
+            // changeCrateCount(-1, gm.gameObject);
 
             Destroy(gameObject);
         }
@@ -43,7 +43,6 @@ public class Crate: MonoBehaviour
         {
             Debug.Log("TMMTMTMTM");
         }
-
 
         //int newIdx = 0;
         //Transform newPoint = manager.getUnusedSpawnPoint(ref newIdx);
@@ -64,4 +63,23 @@ public class Crate: MonoBehaviour
 
         //transform.position = newPoint.position;
     }
+
+    //[Command]
+    //public void changeCrateCount(int delta, GameObject gmo)
+    //{
+    //    MultiplayerGameManager gm = gmo.GetComponent<MultiplayerGameManager>();
+    //    if (gm != null)
+    //    {
+    //        //gm.m_NumSpawnedCrates--;
+    //        if (gm.m_NumSpawnedCrates + delta >= 0)
+    //        {
+    //            gm.m_NumSpawnedCrates += delta;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("GMGMMGMGMGM");
+    //    }
+        
+    //}
 }

@@ -20,11 +20,12 @@ public class MultiplayerGameManager : NetworkManager
     public int m_NumRoundsToWin = 5;
     public float m_StartDelay = 3f;
     public float m_EndDelay = 3f;
-    public float m_CrateSpawnDelay = 8f;
+    public float m_CrateSpawnDelay = 15f;
     public int m_MinPlayer = 2;
     public int m_MaxPlayer = 2;
+    public int m_maxCrateSpawned = 100;
     public GameMode m_GameMode = GameMode.LastStand;
-    public int m_maxCrateSpawned = 3;
+    public int m_PointsToWin = 10050;
 
     // Client           
     public CameraControl m_CameraControl;
@@ -129,7 +130,7 @@ public class MultiplayerGameManager : NetworkManager
         // DateTime start = DateTime.Now;
         start = Time.time;
 
-        while(!OneTankLeft())
+        while(!IsTerminalState())
         {
             float dur = Time.time - start;
             if (dur >= m_CrateSpawnDelay)
@@ -166,6 +167,18 @@ public class MultiplayerGameManager : NetworkManager
         yield return m_EndWait;
     }
 
+    private bool IsTerminalState()
+    {
+        if(m_GameMode == GameMode.LastStand)
+        {
+            return OneTankLeft();
+        }
+        else
+        {
+            return ReachMinPoints();
+        }
+    }
+
     private bool OneTankLeft()
     {
         int numTanksLeft = 0;
@@ -179,12 +192,33 @@ public class MultiplayerGameManager : NetworkManager
         return numTanksLeft <= 0;
     }
 
-    private TankManager GetRoundWinner()
+    private bool ReachMinPoints()
     {
         for (int i = 0; i < m_Tanks.Count; i++)
         {
-            if (m_Tanks[i].gameObject.activeSelf)
-                return m_Tanks[i];
+            if (m_Tanks[i].gameObject.activeSelf && m_Tanks[i].m_Cash >= m_PointsToWin)
+                return true;
+        }
+        return false;
+    }
+
+    private TankManager GetRoundWinner()
+    {
+        if (m_GameMode == GameMode.LastStand)
+        {
+            for (int i = 0; i < m_Tanks.Count; i++)
+            {
+                if (m_Tanks[i].gameObject.activeSelf)
+                    return m_Tanks[i];
+            }
+        }
+        else
+        {
+            for (int i = 0; i < m_Tanks.Count; i++)
+            {
+                if (m_Tanks[i].gameObject.activeSelf && m_Tanks[i].m_Cash >= m_PointsToWin)
+                    return m_Tanks[i];
+            }
         }
 
         return null;
@@ -262,13 +296,6 @@ public class MultiplayerGameManager : NetworkManager
 
         int j;
 
-        // do
-        // {
-        //     j = UnityEngine.Random.Range(0, m_CrateSpawnPoints.Length - 1);
-        //     Debug.Log(j);
-
-        // } while (m_UsedCrateSpawnPoints[j]);
-
         j = UnityEngine.Random.Range(0, m_CrateSpawnPoints.Length - 1);
 
         m_UsedCrateSpawnPoints[j] = true;
@@ -280,12 +307,8 @@ public class MultiplayerGameManager : NetworkManager
 
         m_NumSpawnedCrates++;
 
-        Debug.Log("spawn idx: " + idx);
-
         return m_CrateSpawnPoints[j];
     }
-
-
 
     #region Unity Callbacks
 

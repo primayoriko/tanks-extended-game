@@ -1,8 +1,9 @@
-using UnityEngine;
+using System;
 using System.Collections;
-using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Mirror;
 
 /*
@@ -10,24 +11,47 @@ using Mirror;
 	API Reference: https://mirror-networking.com/docs/api/Mirror.NetworkManager.html
 */
 
+public enum GameMode { LastStand, CollectMoney }
+
 public class MultiplayerGameManager : NetworkManager
 {
-
-    public int m_MinPlayer = 2;
-    public int m_MaxPlayer = 2;
+    public List<NetworkConnection> connections;
+    // Server
     public int m_NumRoundsToWin = 5;
     public float m_StartDelay = 3f;
     public float m_EndDelay = 3f;
-    private int m_RoundNumber;
-    private WaitForSeconds m_StartWait;
-    private WaitForSeconds m_EndWait;       
-    private TankManager m_RoundWinner;
-    private TankManager m_GameWinner;
-    private List<TankManager> m_Tanks = new List<TankManager>();
+    public float m_CrateSpawnDelay = 8f;
+    public int m_MinPlayer = 2;
+    public int m_MaxPlayer = 2;
+    public GameMode m_GameMode = GameMode.LastStand;
+    public int m_maxCrateSpawned = 3;
+
+    // Client           
     public CameraControl m_CameraControl;
     public Text m_MessageText;
     public GameObject m_CashTextObject;
-    //public Text m_MessageText;
+
+    // Server              
+    public GameObject m_TankPrefab;
+    public GameObject m_CratePrefab;
+    public Transform m_SpawnPoint;
+    public Transform[] m_CrateSpawnPoints;
+    public bool[] m_UsedCrateSpawnPoints;
+    [HideInInspector] public int m_NumSpawnedCrates = 0;
+    private List<TankManager> m_Tanks = new List<TankManager>();
+
+    // Server
+    private int m_RoundNumber;
+    private WaitForSeconds m_StartWait;
+    private WaitForSeconds m_EndWait;
+    private TankManager m_RoundWinner;
+    private TankManager m_GameWinner;
+    private float start;
+
+    //public MultiplayerGameManager()
+    //{
+    //    m_UsedCrateSpawnPoints = new bool[6];
+    //}
 
     [Server]
     public override void OnServerAddPlayer(NetworkConnection conn) {
@@ -67,6 +91,7 @@ public class MultiplayerGameManager : NetworkManager
     {
         yield return StartCoroutine(RoundStarting());
         yield return StartCoroutine(RoundPlaying());
+        //yield return StartCoroutine(SpawnCrates());
         yield return StartCoroutine(RoundEnding());
 
         if (m_GameWinner != null)
@@ -83,6 +108,7 @@ public class MultiplayerGameManager : NetworkManager
     {
         ResetAllTanks();
         DisableTankControl();
+        EmptyCrateSpawnPoints();
 
         m_CameraControl.SetStartPositionAndSize();
 
@@ -91,6 +117,7 @@ public class MultiplayerGameManager : NetworkManager
 
         yield return m_StartWait;
     }
+
     private IEnumerator RoundPlaying()
     {
         EnableTankControl();
@@ -99,12 +126,27 @@ public class MultiplayerGameManager : NetworkManager
 
         yield return null;
 
+        // DateTime start = DateTime.Now;
+        start = Time.time;
+
         while(!OneTankLeft())
         {
+            float dur = Time.time - start;
+            if (dur >= m_CrateSpawnDelay)
+            {
+                Debug.Log("Time: " + dur);
+                SpawnCrates();
+                start = Time.time;
+            }
+            
+            //yield return StartCoroutine();
+            //yield return new WaitForSecondsRealtime(m_CrateSpawnDelay);
+
+            //SpawnCrates();
+
             yield return null;
         }
     }
-
 
     private IEnumerator RoundEnding()
     {
@@ -124,7 +166,7 @@ public class MultiplayerGameManager : NetworkManager
         yield return m_EndWait;
     }
 
-     private bool OneTankLeft()
+    private bool OneTankLeft()
     {
         int numTanksLeft = 0;
 
@@ -170,6 +212,77 @@ public class MultiplayerGameManager : NetworkManager
             tank.GetComponent<TankMovement>().enabled = false;
             tank.GetComponent<TankShooting>().enabled = false;
         }
+    }
+    
+    private void EmptyCrateSpawnPoints()
+    {
+        m_NumSpawnedCrates = 0;
+
+        Debug.Log("size "+ m_UsedCrateSpawnPoints.Length);
+
+        for (int i = 0; i < m_UsedCrateSpawnPoints.Length; i++)
+        {
+            m_UsedCrateSpawnPoints[i] = false;
+
+        }
+    }
+
+    private void SpawnCrates()
+    {
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        if (m_NumSpawnedCrates == m_maxCrateSpawned || m_RoundWinner != null){
+            // yield return null;
+            return;
+        }
+
+        // yield return new WaitForSecondsRealtime(m_CrateSpawnDelay);
+
+        int idx = 0;
+
+        Transform loc = getUnusedSpawnPoint(ref idx);
+
+        if(loc != null && m_RoundWinner == null)
+        {
+            GameObject crate = Instantiate(m_CratePrefab, loc.position, loc.rotation);
+
+            NetworkServer.Spawn(crate);
+
+            Debug.Log("crate pwned");
+        }
+
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+    }
+    
+    public Transform getUnusedSpawnPoint(ref int idx)
+    {
+        if (m_NumSpawnedCrates == m_maxCrateSpawned)
+            return null;
+
+        int j;
+
+        // do
+        // {
+        //     j = UnityEngine.Random.Range(0, m_CrateSpawnPoints.Length - 1);
+        //     Debug.Log(j);
+
+        // } while (m_UsedCrateSpawnPoints[j]);
+
+        j = UnityEngine.Random.Range(0, m_CrateSpawnPoints.Length - 1);
+
+        m_UsedCrateSpawnPoints[j] = true;
+
+        idx = j;
+
+        Debug.Log("selected idx:" + j + " / "+ m_NumSpawnedCrates);
+
+
+        m_NumSpawnedCrates++;
+
+        Debug.Log("spawn idx: " + idx);
+
+        return m_CrateSpawnPoints[j];
     }
 
 

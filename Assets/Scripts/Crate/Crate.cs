@@ -19,10 +19,36 @@ public class Crate: MonoBehaviour
     // }
 
     void OnTriggerEnter(Collider other){
-        int newIdx = 0;
-        Transform newPoint = manager.getUnusedSpawnPoint(ref newIdx);
-        manager.m_UsedSpawnPoints[index] = false;
-        index = newIdx;
+        value = UnityEngine.Random.Range(20, 50);
+
+        TankManager tm = other.GetComponent<TankManager>();
+
+        MultiplayerGameManager gm = other.GetComponentInParent<MultiplayerGameManager>();
+
+        if(tm != null)
+        {
+            tm.m_Cash += value;
+            
+            if(gm != null)
+            {
+                gm.m_NumSpawnedCrates--;
+            } else
+            {
+                Debug.Log("GMGMMGMGMGM");
+            }
+
+            Destroy(gameObject);
+        }
+        else
+        {
+            Debug.Log("TMMTMTMTM");
+        }
+
+
+        //int newIdx = 0;
+        //Transform newPoint = manager.getUnusedSpawnPoint(ref newIdx);
+        //manager.m_UsedSpawnPoints[index] = false;
+        //index = newIdx;
 
         // if(other.name == "Player1"){
         //     other.GetComponent<TankCash>().m_Cash += value;
@@ -30,13 +56,12 @@ public class Crate: MonoBehaviour
         //     other.GetComponent<TankCash>().m_Cash += value;
         // } else if(other.tag == "Box"){
         //     Debug.Log("Box");
-            
+
         // } else {
         //     Debug.Log("UHUY");
 
         // }
 
-        transform.position = newPoint.position;
-        value = UnityEngine.Random.Range(30, 70);
+        //transform.position = newPoint.position;
     }
 }

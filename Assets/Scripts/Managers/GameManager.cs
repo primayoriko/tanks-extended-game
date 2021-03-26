@@ -12,6 +12,7 @@ public class GameManager : NetworkManager
     public int m_NumRoundsToWin = 5;        
     public float m_StartDelay = 3f;         
     public float m_EndDelay = 3f;
+    public float m_CrateSpawnDelay = 4f;
 
     // Client           
     public CameraControl m_CameraControl;   
@@ -156,6 +157,17 @@ public class GameManager : NetworkManager
         }
     }
 
+    private IEnumerator SpawnCrates()
+    {
+        EnableTankControl();
+
+        m_MessageText.text = string.Empty;
+
+        while (!OneTankLeft())
+        {
+            yield return null;
+        }
+    }
 
     private IEnumerator RoundEnding()
     {

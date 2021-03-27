@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 3ebd2868ae86cab4093ec2a8abdb28ec
   - enabled: 1
-    path: Assets/Scenes/SelectMap.unity
-    guid: ff7f902469ddeeb44a3b1c69682a52c0
+    path: Assets/Scenes/GameOptions.unity
+    guid: 2db289ae4f53ca94e92ef9391cf5ed5d
   - enabled: 1
     path: Assets/Scenes/Map1.unity
     guid: 5a59f714948aaf8449df9eedb0dfac4a

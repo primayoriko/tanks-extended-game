@@ -586,7 +586,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 65, y: 69.7}
-  m_SizeDelta: {x: 120, y: 30}
+  m_SizeDelta: {x: 230, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5727981081208864790
 CanvasRenderer:
@@ -618,12 +618,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4beb055f07aaff244873dec698d0363e, type: 3}
-    m_FontSize: 16
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -5690,7 +5690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3726708704842869069}
   - component: {fileID: 2404384093888129482}
-  - component: {fileID: 450947010099086087}
+  - component: {fileID: 3293961583873668229}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -5720,7 +5720,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4581811571943810205}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &450947010099086087
+--- !u!114 &3293961583873668229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5732,7 +5732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d71475f4045e258499f4b65871550905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameLabel: {fileID: 5507220852281232396}
+  m_NameText: {fileID: 5507220852281232396}
 --- !u!1 &4922244627855950526
 GameObject:
   m_ObjectHideFlags: 0

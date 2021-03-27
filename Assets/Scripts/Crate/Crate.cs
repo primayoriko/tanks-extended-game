@@ -7,10 +7,7 @@ using Mirror;
 // [Serializable]
 public class Crate: NetworkBehaviour
 {
-    // public Transform m_SpawnPoint;
     // [HideInInspector] public GameObject m_Instance;      
-    [HideInInspector] public int index;     
-    [HideInInspector] public CrateManager manager;  
     [HideInInspector] public int value = 50;  
 
     // void OnCollisionEnter(Collision collide){

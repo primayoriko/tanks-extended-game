@@ -2,19 +2,24 @@
 
 ## Description
 ----------------
-Game Tanks: Extended ini adalah pengembangan dari Tutorial Game Tanks yang dikembangkan dengan Unity. Gma eini memiliki Genre Shooting 3D dan dapat dimainkan oleh beberapa pihak bersamaan melalui koneksi LAN. Game memiliki beberapa mode dan map yang dapat dipilih sesuai dengan keinginan.
+Game Tanks: Extended ini adalah pengembangan dari Tutorial Game Tanks yang dikembangkan dengan Unity. Game ini memiliki Genre Shooting 3D dan dapat dimainkan oleh beberapa pihak bersamaan melalui koneksi LAN. Game memiliki beberapa mode dan map yang dapat dipilih sesuai dengan keinginan.
 ## How To Run
+### From Unity Editor
 ----------------
+Ada dua cara, yang pertama
 
-1. asdsasa
-2. sad
-3. sad
-4. sda
-5. sad
-6. ssss
-7. da
+1. Tekan tombol play pada bagian atas layar
+2. Unity Editor akan menjalankan game pada aplikasi tersebut
+
+Cara kedua
+1. Tekan menu `File`
+2. tekan Pilihan `Build And Run`
+3. Tunggu sampai program dibuat dan terbuka di folder berbeda
+### Builded
+----------------
+1. Langsung jalankan/eksekusi saja executable file yang dimiliki
+
 ## How To Use
-
 ### Setting
 ----------------
 
@@ -39,21 +44,24 @@ Game Tanks: Extended ini adalah pengembangan dari Tutorial Game Tanks yang dikem
 ## How To Play
 ----------------
 
-1. sudah
-2. asd
-3. sad
-4. sa
-5. d
-6. sda
+1. Gunakan key WASD menggerakkan tank 
+2. Gunakan key spasi untuk menembak peluru biasa
+3. Gunakan key j atau k untuk menembak peluru khusus (membayar cash tertentu)
+4. Gunakan key n atau m untuk mengeluarkan (spawn) bot untuk membantumu (membayar cash tertentu)
+5. Di sekitar map akan terdapat spawnable crate, ambil untuk mendapatkan cash!
+6. Lakukan tujuan permainan sesuai mode game, 
+   - Mode Last Stand (atau Battle Royale) kalah kan musuh-musuhmu yang lain!
+   - Mode Collect Money kumpulkan uang hingga sejumlah yang dimint adan jadilah pemenang!
+
 ## Specification Progress
 ----------------
-1. **[Parsial]** Multiplayer dapat dijalankan secara local area network dengan lebih dari dua pemain. Implementasi matchmaking (lobby) dibebaskan.
+1. **[Parsial, beberapa masih kurang sinkron antara server dan klien]** Multiplayer dapat dijalankan secara local area network dengan lebih dari dua pemain. Implementasi matchmaking (lobby) dibebaskan.
 2. **[Selesai]** Pada main menu, terdapat settings untuk mengatur intensitas suara dan nama pemain yang diimplementasi dengan PlayerPrefs.
 3. **[Selesai]** Desain pada map harus berbeda dari desain semula pada tutorial namun dapat menggunakan aset apapun.
 4. **[Selesai]** Terdapat objek cash yang muncul secara periodik. Tank dapat mengambil cash untuk menambahkan uang yang dimilikinya.
 5. **[Selesai]** Terdapat minimal dua jenis senjata dengan karakteristik yang berbeda. Pemain dapat membeli senjata dengan menggunakan cash.
-6. **[??]** Terdapat minimal dua jenis karakter bergerak yang dapat dikeluarkan (tempat dibebaskan) dengan membayar cash, memiliki behavior yang berbeda, dan dapat diserang dengan peluru. Animasi saat karakter bergerak melakukan aksi (contohnya jalan, tembak, dan diam) harus berbeda, namun dapat menggunakan aset apapun.
-7. **[??]** Terdapat interaksi collision antara objek bergerak seperti tank dan karakter.
+6. **[Parsial, kurang animasi]** Terdapat minimal dua jenis karakter bergerak yang dapat dikeluarkan (tempat dibebaskan) dengan membayar cash, memiliki behavior yang berbeda, dan dapat diserang dengan peluru. Animasi saat karakter bergerak melakukan aksi (contohnya jalan, tembak, dan diam) harus berbeda, namun dapat menggunakan aset apapun.
+7. **[Efek default sehingga tidak bisa menembus satu sama lain]** Terdapat interaksi collision antara objek bergerak seperti tank dan karakter.
 8. **[Selesai]** Aset tambahan yang digunakan dibebaskan namun perlu dituliskan pada credits.
 9. **[Selesai]** Terdapat lebih dari satu map yang dapat dipilih oleh pemain.
 10. **[Selesai]** Terdapat lebih dari satu game mode selain battle royale.
@@ -68,19 +76,19 @@ Berikut ini adalah Library dan Asset yang digunakan di luar dari Library Default
 
 1. Main Menu
 
-    ![]()
+    ![mm](Docs/menu.png)
 
 2. Settings
 
-    ![]()
+    ![s](Docs/menu.png)
 
 3. Credits
 
-    ![]()
+    ![c](Docs/credits.png)
 
 4. Game Options
 
-    ![]()
+    ![go](Docs/game_options.png)
 
 5. MultiPlayer Lobby
 
@@ -88,7 +96,7 @@ Berikut ini adalah Library dan Asset yang digunakan di luar dari Library Default
 
 6. Inital Condition Game
 
-    ![]()
+    ![g](Docs/game.png)
 
 7. Crates In map
 
@@ -117,10 +125,13 @@ Berikut ini adalah Library dan Asset yang digunakan di luar dari Library Default
    - Integration of Game
    - Bugfixing
   
+  
 2. Bambang Haryo 
    - Multiplayer
    - NPC
    - Bugfixing
+
+
 
 3. Muhammad Ziyad Rahmatullah
    - Main Menu

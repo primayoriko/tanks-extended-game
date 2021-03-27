@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_MinPlayer: 1
   m_MaxPlayer: 1
   m_maxCrateSpawned: 10
-  m_GameMode: 0
+  m_GameMode: 1
   m_PointsToWin: 550
   m_CratePrefab: {fileID: 742728276885263289, guid: c1a3ff4e709c359429cd48e81c54bb8d,
     type: 3}

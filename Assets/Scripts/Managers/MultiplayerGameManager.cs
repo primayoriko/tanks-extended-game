@@ -398,9 +398,7 @@ public class MultiplayerGameManager : NetworkManager
 
         idx = j;
 
-        Debug.Log("selected idx:" + j + " / "+ m_NumSpawnedCrates);
-
-
+        // Debug.Log("selected idx:" + j + " / "+ m_NumSpawnedCrates);
         m_NumSpawnedCrates++;
 
         return m_CrateSpawnPoints[j];

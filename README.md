@@ -61,8 +61,8 @@ Game Tanks: Extended ini adalah pengembangan dari Tutorial Game Tanks yang dikem
 ----------------
 Berikut ini adalah Library dan Asset yang digunakan di luar dari Library Default System dari C# dan UnityEngine dari UI 
 
-1. Mirror: Digunakan sebagai sarana untuk men-support pembuatan mutiplayer game.
-2. WoodenBox: Asset (hanya model 3D tanpa script) untuk membuat crate untuk men-collect cash.
+1. [Mirror](https://assetstore.unity.com/packages/tools/network/mirror-129321): Digunakan sebagai sarana untuk men-support pembuatan mutiplayer game.
+2. [Tools Wooden Box](https://assetstore.unity.com/packages/3d/props/tools/tools-wooden-boxes-185738): Digunakan sebagai Asset (hanya model 3D tanpa script) untuk membuat crate pada game yang merupakan spawn object dan dapat dicollect untuk mendapatkan cash.
 ## Some Screenshot
 ----------------
 

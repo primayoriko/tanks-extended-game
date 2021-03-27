@@ -39,6 +39,7 @@
      <Compile Include="Assets\Scripts\MenuAndSettings\VolumeAdapterSetup.cs" />
      <Compile Include="Assets\Scripts\Tank\TankMovement.cs" />
      <Compile Include="Assets\Scripts\Tank\TankHealth.cs" />
+     <Compile Include="Assets\Scripts\MenuAndSettings\ModeSelection.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
      <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
@@ -106,7 +107,6 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\Scripts\Managers\oldTankManager.cs" />
-     <Compile Include="Assets\Scripts\MenuAndSettings\ModeSelection.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
@@ -368,34 +368,34 @@
         <HintPath>D:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Mono.CecilX.Rocks">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Mono.CecilX.Pdb">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Library/PackageCache/com.unity.analytics@3.5.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Library/PackageCache/com.unity.analytics@3.5.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Library/PackageCache/com.unity.analytics@3.5.3/Unity.Analytics.Editor.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Library/PackageCache/com.unity.analytics@3.5.3/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Mono.CecilX">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Assets/Mirror/Tests/Common/Castle.Core.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Assets/Mirror/Tests/Common/Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="NSubstitute">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Assets/Mirror/Tests/Common/NSubstitute.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Assets/Mirror/Tests/Common/NSubstitute.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Assets/Mirror/Tests/Common/System.Threading.Tasks.Extensions.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Assets/Mirror/Tests/Common/System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Library/PackageCache/com.unity.analytics@3.5.3/Unity.Analytics.Tracker.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Library/PackageCache/com.unity.analytics@3.5.3/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Mono.CecilX.Mdb">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>D:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -743,16 +743,16 @@
         <HintPath>D:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

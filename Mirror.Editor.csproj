@@ -283,41 +283,38 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
         <HintPath>D:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
-        <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.CecilX.Rocks">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Mono.CecilX.Pdb">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Library/PackageCache/com.unity.analytics@3.5.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Library/PackageCache/com.unity.analytics@3.5.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Library/PackageCache/com.unity.analytics@3.5.3/Unity.Analytics.Editor.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Library/PackageCache/com.unity.analytics@3.5.3/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Mono.CecilX">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Assets/Mirror/Tests/Common/Castle.Core.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Assets/Mirror/Tests/Common/Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="NSubstitute">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Assets/Mirror/Tests/Common/NSubstitute.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Assets/Mirror/Tests/Common/NSubstitute.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Assets/Mirror/Tests/Common/System.Threading.Tasks.Extensions.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Assets/Mirror/Tests/Common/System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Library/PackageCache/com.unity.analytics@3.5.3/Unity.Analytics.Tracker.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Library/PackageCache/com.unity.analytics@3.5.3/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Mono.CecilX.Mdb">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>D:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -665,10 +662,10 @@
         <HintPath>D:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>D:/Riko/Projects/Unity/if3210-2021-unity-k2-12/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>D:/Riko/Projects/PBD/if3210-2021-unity-k2-12/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

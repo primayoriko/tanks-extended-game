@@ -126,6 +126,8 @@ GameObject:
   - component: {fileID: 8566658390586476107}
   - component: {fileID: 6767893606291961211}
   - component: {fileID: 7582706898553706573}
+  - component: {fileID: 5009042943782704021}
+  - component: {fileID: 8180373023403378183}
   m_Layer: 9
   m_Name: Tank
   m_TagString: Player
@@ -154,6 +156,8 @@ Transform:
   - {fileID: 2894108363874821469}
   - {fileID: 3726708704842869069}
   - {fileID: 2731070911293610715}
+  - {fileID: 1459400491009738937}
+  - {fileID: 7843697276356512445}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -551,6 +555,40 @@ MonoBehaviour:
   m_MaxChargeTime: 0.9
   m_LeftFireTransform: {fileID: 1852250169728136661}
   m_RightFireTransform: {fileID: 75307601482102260}
+--- !u!114 &5009042943782704021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304115889881279600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5258348eff6f9e445836c4a79523f950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  m_Spawnling: {fileID: 6727518866894246441, guid: 82aef4dde2db2af4bb696aee5b5ff554,
+    type: 3}
+  m_SpawnTransform: {fileID: 1459400491009738937}
+--- !u!114 &8180373023403378183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304115889881279600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1956b894ed97c3f47b3475d6d03ba579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  m_Spawnling: {fileID: 1914751654489126863, guid: 36f7ddf4cf04d304bbfff00f714f950b,
+    type: 3}
+  m_SpawnTransform: {fileID: 7843697276356512445}
 --- !u!1 &2089507688628412006
 GameObject:
   m_ObjectHideFlags: 0
@@ -5733,6 +5771,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NameText: {fileID: 5507220852281232396}
+--- !u!1 &4824291017804430711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7843697276356512445}
+  m_Layer: 9
+  m_Name: Spawn2Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7843697276356512445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824291017804430711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2, y: 0.87, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8349560377362386181}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4922244627855950526
 GameObject:
   m_ObjectHideFlags: 0
@@ -6092,6 +6160,36 @@ Transform:
   - {fileID: 4463942633415288964}
   m_Father: {fileID: 8349560377362386181}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7717210063048630907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1459400491009738937}
+  m_Layer: 9
+  m_Name: Spawn1Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1459400491009738937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7717210063048630907}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2, y: 0.87, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8349560377362386181}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8587502415870837843
 GameObject:

@@ -80,7 +80,7 @@ Berikut ini adalah Library dan Asset yang digunakan di luar dari Library Default
 
 2. Settings
 
-    ![s](Docs/menu.png)
+    ![s](Docs/settings.png)
 
 3. Credits
 

@@ -1442,10 +1442,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842ecc6ce956dec48bf7be0c7d79afc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Map: {fileID: 608383267}
-  Map2: 
-  Name: {fileID: 2003371293}
-  Name2: 
+  m_MapText: {fileID: 608383267}
+  m_NameText: {fileID: 2003371293}
+  m_ModeText: {fileID: 1991684350}
 --- !u!4 &463083756
 Transform:
   m_ObjectHideFlags: 0

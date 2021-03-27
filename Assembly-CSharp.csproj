@@ -85,7 +85,6 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets\_Completed-Assets\Scripts\Camera\CameraControl.cs" />
      <Compile Include="Assets\Scripts\MenuAndSettings\BGsound.cs" />
-     <Compile Include="Assets\Scripts\MenuAndSettings\NameTag2.cs" />
      <Compile Include="Assets\Scripts\Managers\ObjectPoolingManager.cs" />
      <Compile Include="Assets\_Completed-Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />

@@ -79,6 +79,7 @@ public class MultiplayerGameManager : NetworkManager
         m_PlayerColor.Add(Color.red);
         m_PlayerColor.Add(Color.green);
         m_PlayerColor.Add(Color.blue);
+        m_GameMode = (GameMode) GameMenuState.modeInput;
     }
 
     [Server]

@@ -1305,8 +1305,8 @@ MonoBehaviour:
   m_StartDelay: 3
   m_EndDelay: 3
   m_CrateSpawnDelay: 10
-  m_MinPlayer: 1
-  m_MaxPlayer: 1
+  m_MinPlayer: 3
+  m_MaxPlayer: 3
   m_maxCrateSpawned: 10
   m_GameMode: 1
   m_PointsToWin: 550

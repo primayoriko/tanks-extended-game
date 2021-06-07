@@ -61,7 +61,7 @@ Cara kedua
 4. **[Selesai]** Terdapat objek cash yang muncul secara periodik. Tank dapat mengambil cash untuk menambahkan uang yang dimilikinya.
 5. **[Selesai]** Terdapat minimal dua jenis senjata dengan karakteristik yang berbeda. Pemain dapat membeli senjata dengan menggunakan cash.
 6. **[Parsial, kurang animasi]** Terdapat minimal dua jenis karakter bergerak yang dapat dikeluarkan (tempat dibebaskan) dengan membayar cash, memiliki behavior yang berbeda, dan dapat diserang dengan peluru. Animasi saat karakter bergerak melakukan aksi (contohnya jalan, tembak, dan diam) harus berbeda, namun dapat menggunakan aset apapun.
-7. **[Efek default sehingga tidak bisa menembus satu sama lain]** Terdapat interaksi collision antara objek bergerak seperti tank dan karakter.
+7. **[Selesai]** Terdapat interaksi collision antara objek bergerak seperti tank dan karakter.
 8. **[Selesai]** Aset tambahan yang digunakan dibebaskan namun perlu dituliskan pada credits.
 9. **[Selesai]** Terdapat lebih dari satu map yang dapat dipilih oleh pemain.
 10. **[Selesai]** Terdapat lebih dari satu game mode selain battle royale.
@@ -86,33 +86,33 @@ Berikut ini adalah Library dan Asset yang digunakan di luar dari Library Default
 
     ![c](Docs/credits.png)
 
-4. Game Options
+4. Game Options, from name type, map and mode selection, and multiplayer options
 
-    ![go](Docs/game_options.png)
+    ![go](Docs/game-options.png)
 
-5. MultiPlayer Lobby
+5. Game Setup
 
-    ![]()
+    ![gs](Docs/game-setup.png)
 
-6. Inital Condition Game
+6. Initial Condition Game
 
     ![g](Docs/game.png)
 
-7. Crates In map
-
-    ![]()
+7. Crates In map, which is spawned every some interval
 
 8. Shooting
 
-    ![]()
+    ![s](Docs/shooting.png)
 
-9. Special Shooting
+9.  Special Shooting, there are multi shoot and sniper shoot
 
-    ![]()
+10. Spawning bots/minions, there are two types of them
 
-10. Winning Round
+    ![sb](Docs/spawn-bots.png)
 
-    ![]()
+11. Winning Round
+
+    ![w](Docs/win-condition.png)
 
 ## Separation of Tasks
 ----------------
@@ -138,14 +138,3 @@ Berikut ini adalah Library dan Asset yang digunakan di luar dari Library Default
    - Setting Page + Sound System
    - New Map + Map selection
    - Player Name Configure
-
-
-<!-- 
-Kelengkapan README
-
-Deskripsi aplikasi.
-Cara kerja, terutama mengenai pemenuhan spesifikasi aplikasi.
-Library yang digunakan dan justifikasi penggunaannya.
-Screenshot aplikasi.
-Pembagian kerja anggota kelompok. 
--->
